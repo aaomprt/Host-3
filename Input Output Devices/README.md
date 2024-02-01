@@ -48,13 +48,7 @@ lsusb
      ```
      
 * List PCI Bus Devices/DMA Controllers (ควบคุมการถ่ายโอนข้อมูลโดยไม่ใช้ CPU): Direct Memory Access (DMA) Controllers ทำให้อุปกรณ์ I/O สามารถถ่ายโอนข้อมูลไปยังหรือจากระบบหน่วยความจำโดยตรงโดยไม่ต้องผ่าน CPU ทำให้ประสิทธิภาพการถ่ายโอนข้อมูลมีประสิทธิภาพมากขึ้น
-lspci stands for list PCI devices. lspci command is used to display information about PCI buses in the system and hardware devices that are connected to PCI and PCI bus.
-
-It will display information about model number/chip details for devices like PCI bridge, VGA controller, Ethernet controller, USB controller, Audio device, IDE interface, etc,.,
-
-lspci doesn’t come stand alone utility and its part of the pciutils package.
-
-By default, it shows a brief list of devices which are attached in the system, so filter out specific device information with grep for better view.
+lspci stands for list PCI devices. lspci command is used to display information about PCI buses in the system and hardware devices that are connected to PCI and PCI bus. It will display information about model number/chip details for devices like PCI bridge, VGA controller, Ethernet controller, USB controller, Audio device, IDE interface, etc,., lspci doesn’t come stand alone utility and its part of the pciutils package. By default, it shows a brief list of devices which are attached in the system, so filter out specific device information with grep for better view.
    * คำสั่ง: lspci -v (แสดงข้อมูล PCI devices พร้อมรายละเอียด) To display the detailed information of all the PCI devices
      ### ตัวอย่าง: lspci -v
      ```
@@ -67,9 +61,7 @@ By default, it shows a brief list of devices which are attached in the system, s
 
 
      
-* List block devices lsblk stands for list block devices. It’s display information about block devices (except RAM disks). Block devices are hard disk partition, flash drives, CD-ROM, optical drives, etc,.
-
-lsblk is part of the util-linux package. It’s collection of basic system utilities that contains a large variety of low-level system utilities that are necessary for a Linux system to function.
+* List block devices lsblk stands for list block devices. It’s display information about block devices (except RAM disks). Block devices are hard disk partition, flash drives, CD-ROM, optical drives, etc,. lsblk is part of the util-linux package. It’s collection of basic system utilities that contains a large variety of low-level system utilities that are necessary for a Linux system to function.
   * lsblk Usage 
      Just run the following command to get the block device information.
      ### ตัวอย่าง: lsblk
@@ -101,9 +93,7 @@ lsblk is part of the util-linux package. It’s collection of basic system utili
 
 
 
-* List USB buses and device lsusb stands for list Universal Serial Bus or USB. It’s display information about USB buses in the system and the devices connected to them. This will display a list of all USB devices connected to your computer such as keyboards, mouse, printers, disk drives, network adapters, etc.,.
-
-lsusb doesn’t come stand alone utility and its part of the usbutils package.
+* List USB buses and device lsusb stands for list Universal Serial Bus or USB. It’s display information about USB buses in the system and the devices connected to them. This will display a list of all USB devices connected to your computer such as keyboards, mouse, printers, disk drives, network adapters, etc.,. lsusb doesn’t come stand alone utility and its part of the usbutils package.
   * lsusb Usage
      Just run the following command to get the USB device information.
      ### ตัวอย่าง: lsusb
@@ -128,9 +118,7 @@ lsusb doesn’t come stand alone utility and its part of the usbutils package.
 
 
 
-* List scsi Devices lsscsi stands for list small Computer System Interface. The lsscsi command lists information about SCSI/Sata devices attached to the system.
-
-It scans the sysfs (mounted at /sys) pseudo file system to gather information, which was introduced in the 2.6 Linux kernel series.
+* List scsi Devices lsscsi stands for list small Computer System Interface. The lsscsi command lists information about SCSI/Sata devices attached to the system. It scans the sysfs (mounted at /sys) pseudo file system to gather information, which was introduced in the 2.6 Linux kernel series.
   * lspci Usage
      Just run the following command to get the SCSI device information.
      ### ตัวอย่าง: lsusb
