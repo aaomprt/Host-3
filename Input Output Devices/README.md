@@ -128,3 +128,8 @@ lspci stands for list PCI devices. lspci command is used to display information 
     [0:2:1:0]    disk    IBM      ServeRAID M5110e 3.24  /dev/sdb
     [2:0:0:0]    cd/dvd  IBM SATA  DEVICE 62F2642  SA82  /dev/sr0
      ```
+
+
+|: — — :|
+
+
