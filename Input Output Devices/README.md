@@ -130,6 +130,9 @@ lspci stands for list PCI devices. lspci command is used to display information 
      ```
 
 
-|: — — :|
-
-
+References |
+---------- |
+(https://www.2daygeek.com/check-system-hardware-devices-bus-information-lspci-lsscsi-lsusb-lsblk-linux/)
+(https://th.linux-console.net/?p=1357)
+(https://www.borntodev.com/wp-content/uploads/2023/08/cheatsheet-linux-command.pdf)
+(https://www.hostpacific.com/command-linux/)
