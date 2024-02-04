@@ -15,4 +15,13 @@
    e1000e
    brcmfmac
    ```
+- การจำกัดไม่ให้โมดูลถูกโหลด ให้ทำการเพิ่มชื่อของโมดูลลงในไฟล์ที่อยู่ใน /etc/modprobe.d/ และให้เริ่มต้นทุกชื่อโมดูลด้วย "blacklist"
+  ```
+  blacklist uhci_hcd
+  blacklist nvidia
+  ```
+- การสร้างชื่อแฝง (alias) สำหรับชื่อโมดูล สามารถสร้างfile .conf /etc/modprobe.d/ เช่น myalias.conf และ กำหนดผ่านโครงสร้าง alias [alias] [module name] ตัวอย่างด้านล่างเป็นการสร้าง alias mymod แทนชื่อโมดูลที่ยาวเกินไป
+    ```
+alias mymod really_long_module_name
+  ```
 
