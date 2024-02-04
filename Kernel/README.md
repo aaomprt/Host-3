@@ -20,8 +20,10 @@
   blacklist uhci_hcd
   blacklist nvidia
   ```
-- การสร้างชื่อแฝง (alias) สำหรับชื่อโมดูล สามารถสร้างfile .conf /etc/modprobe.d/ เช่น myalias.conf และ กำหนดผ่านโครงสร้าง alias [alias] [module name] ตัวอย่างด้านล่างเป็นการสร้าง alias mymod แทนชื่อโมดูลที่ยาวเกินไป
-    ```
-alias mymod really_long_module_name
+- การสร้างชื่อแฝง (alias) สำหรับชื่อโมดูล สามารถสร้างfile .conf /etc/modprobe.d/ เช่น myalias.conf และ กำหนดผ่านโครงสร้าง alias [alias] [module name]
+  ตัวอย่างด้านล่างเป็นการสร้าง alias mymod แทนชื่อโมดูลที่ยาวเกินไป
   ```
+    alias mymod really_long_module_name
+  ```
+
 
