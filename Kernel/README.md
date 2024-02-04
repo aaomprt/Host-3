@@ -48,7 +48,7 @@
 - สามารถใช้งานได้ทั้งในโหมดแบบอินเทอร์แอคทีฟและแบบสคริปต์
 **Syntax:**
   ```
-sysctl [ OPTIONS ]
+  sysctl [ OPTIONS ]
   ```
 | Options | Options Meaning |
 | :---: | --- |
