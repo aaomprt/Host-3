@@ -32,7 +32,7 @@
 
 ไดเรกทอรี /proc/sys ถูกแบ่งออกเป็นไดเรกทอรีย่อยได้แก่:
 | Subdirectory | What it is |
-| --- | --- |
+| :---: | --- |
 | abi/ | Execution domains & personalities |
 | debug/ | <empty> |
 | dev/ |Device specific information (eg dev/cdrom/info)|
@@ -42,8 +42,21 @@
 | vm/ | Memory management tuning buffer and cache management |
 | user/ | Per user per user namespace limits |
 
+**The sysctl Command**
 
-
+- คำสั่ง sysctl เป็นเครื่องมือซอฟต์แวร์ที่อ่านและปรับเปลี่ยนคุณสมบัติของ kernel เช่น เวอร์ชัน, maximum limits, และการตั้งค่าความปลอดภัย
+- สามารถใช้งานได้ทั้งในโหมดแบบอินเทอร์แอคทีฟและแบบสคริปต์
+**Syntax:**
+  ```
+sysctl [ OPTIONS ]
+  ```
+| Options | Options Meaning |
+| :---: | --- |
+| -a, --all | Display all values currently available. |
+| -e, --ignore | Use this option to ignore errors about unknown keys. |
+| -p [FILENAME}, --load[=FILENAME] | Load in sysctl settings from the file specified or /etc/sysctl.conf if none given. |
+| -r, --pattern pattern | Only apply settings that match pattern. |
+| -w, --write | Use this option when you want to change a sysctl setting. |
 
 
 
