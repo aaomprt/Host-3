@@ -3,9 +3,11 @@
 
 ------ครึ่งหลัง------------------
 
-## Kernel Module Configuration
+## Kernel Module
+### Configuration
   - คำสั่ง **modprobe** สามารถใช้เพิ่มหรือลบโมดูลได้ โดยมีไฟล์ .conf ทั้งหมดภายในส่วนขยายไดเร็กทอรี /etc/modprobe.d สำหรับระบุตัวเลือกที่จำเป็นสำหรับโมดูลต่างๆ 
-  - file configuration สามารถใช้สร้าง alias (ชื่อสำรองสำหรับโมดูล) หรือเปลี่ยนแปลงลักษณะการทำงานของ modprobe ตามความต้องการ ไฟล์ .conf อยู่ในไดเร็กทอรี /etc/modprobe.d และใน Linux เวอร์ชันเก่า จะอยู่ในไฟล์ /etc/modprobe.conf
+  - file configuration สามารถใช้สร้าง alias (นามแฝงสำหรับโมดูล) หรือเปลี่ยนแปลงลักษณะการทำงานของ modprobe ตามความต้องการ
+  - ไฟล์ .conf อยู่ในไดเร็กทอรี /etc/modprobe.d และใน Linux เวอร์ชันเก่า จะอยู่ในไฟล์ /etc/modprobe.conf
 
 **Loadable module**
  - สามารถกำหนดค่าในไฟล์ .conf ที่อยู่ในไดเรกทอรี /etc/modules-load.d เพื่อโหลดโมดูลเหล่านั้นขณะที่ระบบกำลังเริ่มในส่วนของ init ของกระบวนการบูต
@@ -25,5 +27,23 @@
   ```
     alias mymod really_long_module_name
   ```
+### Kernel Paramiters
+- ไดเรกทอรี /proc/sys มีไฟล์และไดเรกทอรีหลายรายการที่มีประโยชน์ในการเปลี่ยนแปลงการตั้งค่าของคอนเน็กเตอร์ มีประโยชน์เมื่อต้องการแก้ปัญหาหรือปรับแต่งระบบ Linux
+
+ไดเรกทอรี /proc/sys ถูกแบ่งออกเป็นไดเรกทอรีย่อยได้แก่:
+| Subdirectory | What it is |
+| --- | --- |
+| abi/ | Execution domains & personalities |
+| debug/ | <empty> |
+| dev/ |Device specific information (eg dev/cdrom/info)|
+| fs/ | Specific filesystems filehandle, inode, dentry and quota tuning binfmt_misc <Documentation/admin-guide/binfmt-misc.rst> |
+| kernel/ | Global kernel info / tuning miscellaneous stuff |
+| net/ | Networking stuff, for documentation look in: <Documentation/networking/> |
+| vm/ | Memory management tuning buffer and cache management |
+| user/ | Per user per user namespace limits |
+
+
+
+
 
 
