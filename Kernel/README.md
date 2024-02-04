@@ -58,5 +58,34 @@
 | -r, --pattern pattern | Only apply settings that match pattern. |
 | -w, --write | Use this option when you want to change a sysctl setting. |
 
+- การดูว่า attributes มีอะไรบ้างให้ใช้คำสั่ง -a จะทำการแสดงผล parameters ทั้งหมดที่มีการ config ในปัจจุบัน
+  ```
+  host-3@host-3-server$ sysctl -a
+  abi.vsyscall32 = 1
+  debug.exception-trace = 1
+  debug.kprobes-optimization = 1
+  dev.cdrom.autoclose = 1
+  dev.cdrom.autoeject = 0
+  dev.cdrom.check_media = 0
+  dev.cdrom.debug = 0
+  dev.cdrom.info = CD-ROM information, Id: cdrom.c 3.20 2003/12/17
+  ```
+
+**The sysctl.conf File**
+- systcl preload และ configuration file สามารถกำหนดได้ที่ /etc/sysctl.d/99-sysctl.conf
+- การกำหนดค่าแต่ละอย่างจะอยู่ภายในไฟล์ต่างๆ ภายใน etc/sysctl.d 
+- การเปลี่ยนแปลงตั้งค่าสามารถทำได้ผ่านการจัดการไฟล์หรือใช้ sysctl
+- ตัวอย่างคำสั่งต่อไปนี้จะเป็นการเปลี่ยนแปลงค่าของพารามิเตอร์ kernel.sysrq จนกว่าระบบจะถูกรีบูต
+  ```
+  host-3@host-3-server$ sysctl kernel.sysrq=1
+  ```
+- หากต้องการรักษาการเปลี่ยนแปลงระหว่างรีบูต ให้ทำเพิ่มหรือแก้ไขบรรทัดที่ต้องการในไฟล์ /etc/sysctl.d/99-sysctl.conf หรือสร้างไฟล์พารามิเตอร์ที่เกี่ยวข้องในไดเรกทอรี /etc/sysctl.d/
+
+### Monitoring
+
+
+
+
+
 
 
