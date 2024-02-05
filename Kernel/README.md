@@ -165,7 +165,7 @@
 | References |
 | --- |
 | ( https://eng.libretexts.org/Bookshelves/Computer_Science/Operating_Systems/Linux_-_The_Penguin_Marches_On_(McClanahan)/06%3A_Kernel_Module_Management/3.09%3A_The_dmesg_Command "LibreTexts Engineering" ) |
-| (https://www.linuxadictos.com/th/dmesg-comandos-informacion-solucionar-problemas-linux.html "Linux Adicts")
+| (https://www.linuxadictos.com/th/dmesg-comandos-informacion-solucionar-problemas-linux.html "Linux Adicts") |
 
 
 
