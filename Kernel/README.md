@@ -50,7 +50,7 @@
   ```
   sysctl [ OPTIONS ]
   ```
-- | Options | Options Meaning |
+| Options | Options Meaning |
 | :---: | --- |
 | -a, --all | Display all values currently available. |
 | -e, --ignore | Use this option to ignore errors about unknown keys. |
@@ -86,7 +86,8 @@
 - ไฟล์ /proc เป็น virtual filesystem ตัวหนึ่ง บางครั้งถูกเรียกว่า pseudo-file system ของข้อมูลของ process
 - ถือเป็นศูนย์ควบคุมและข้อมูลสำหรับ kernel เนื่องจากส่วนใหญ่ของเครื่องมือระบบก็เป็นการเรียกใช้ไฟล์ในไดเรกทอรีนี้ ตัวอย่างเช่น 'lsmod' เป็นเหมือนกับ 'cat /proc/modules' เป็นต้น
 - การแก้ไขไฟล์ในไดเรกทอรี จะสามารถอ่าน/แก้ไขพารามิเตอร์ของ kernel(sysctl) ได้ในขณะที่ระบบกำลังทำงาน
-- | Directories | Contentents |
+  
+  | Directories | Contentents |
   | :---: | --- |
   | /proc/cmdline | Options passed to the kernel by the boot loader at boot time, such as mounting the kernel as read-only. |
   | /proc/cpuinfo | Information about the processor, such as its type, make, model, and performance. |
