@@ -50,7 +50,7 @@
   ```
   sysctl [ OPTIONS ]
   ```
-| Options | Options Meaning |
+- | Options | Options Meaning |
 | :---: | --- |
 | -a, --all | Display all values currently available. |
 | -e, --ignore | Use this option to ignore errors about unknown keys. |
@@ -82,7 +82,23 @@
 - หากต้องการรักษาการเปลี่ยนแปลงระหว่างรีบูต ให้ทำเพิ่มหรือแก้ไขบรรทัดที่ต้องการในไฟล์ /etc/sysctl.d/99-sysctl.conf หรือสร้างไฟล์พารามิเตอร์ที่เกี่ยวข้องในไดเรกทอรี /etc/sysctl.d/
 
 ### Monitoring
-
+**The /proc Directory**
+- ไฟล์ /proc เป็น virtual filesystem ตัวหนึ่ง บางครั้งถูกเรียกว่า pseudo-file system ของข้อมูลของ process
+- ถือเป็นศูนย์ควบคุมและข้อมูลสำหรับ kernel เนื่องจากส่วนใหญ่ของเครื่องมือระบบก็เป็นการเรียกใช้ไฟล์ในไดเรกทอรีนี้ ตัวอย่างเช่น 'lsmod' เป็นเหมือนกับ 'cat /proc/modules' เป็นต้น
+- การแก้ไขไฟล์ในไดเรกทอรี จะสามารถอ่าน/แก้ไขพารามิเตอร์ของ kernel(sysctl) ได้ในขณะที่ระบบกำลังทำงาน
+- | Directories | Contentents |
+  | :---: | --- |
+  | /proc/cmdline | Options passed to the kernel by the boot loader at boot time, such as mounting the kernel as read-only. |
+  | /proc/cpuinfo | Information about the processor, such as its type, make, model, and performance. |
+  | /proc/devices | List of device drivers configured into the currently running kernel. |
+  | /proc/filesystems | Filesystems configured into the kernel. |
+  | /proc/interrupts | Shows which interrupts are in use, and how many of each there have been. |
+  | /proc/ioports | Which I/O ports are in use at the moment. |
+  | /proc/meminfo | Information about memory usage, both physical and swap. |
+  | /proc/modules | Which kernel modules are loaded at the moment. |
+  | /proc/net | Status information about network protocols. |
+  | /proc/stat | Various statistics about the system, such as the number of page faults since the system was booted. |
+  | /proc/uptime | The length of time the kernel has been running since boot and spent in idle mode (both in seconds). |
 
 
 
