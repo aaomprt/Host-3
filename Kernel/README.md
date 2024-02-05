@@ -30,17 +30,18 @@
 ### Kernel Paramiters
 - ไดเรกทอรี /proc/sys มีไฟล์และไดเรกทอรีหลายรายการที่มีประโยชน์ในการเปลี่ยนแปลงการตั้งค่าของคอนเน็กเตอร์ มีประโยชน์เมื่อต้องการแก้ปัญหาหรือปรับแต่งระบบ Linux
 
-ไดเรกทอรี /proc/sys ถูกแบ่งออกเป็นไดเรกทอรีย่อยได้แก่:
-| Subdirectory | What it is |
-| :---: | --- |
-| abi/ | Execution domains & personalities |
-| debug/ | <empty> |
-| dev/ |Device specific information (eg dev/cdrom/info)|
-| fs/ | Specific filesystems filehandle, inode, dentry and quota tuning binfmt_misc <Documentation/admin-guide/binfmt-misc.rst> |
-| kernel/ | Global kernel info / tuning miscellaneous stuff |
-| net/ | Networking stuff, for documentation look in: <Documentation/networking/> |
-| vm/ | Memory management tuning buffer and cache management |
-| user/ | Per user per user namespace limits |
+  ไดเรกทอรี /proc/sys ถูกแบ่งออกเป็นไดเรกทอรีย่อยได้แก่:
+
+  | Subdirectory | What it is |
+  | :---: | --- |
+  | abi/ | Execution domains & personalities |
+  | debug/ | <empty> |
+  | dev/ |Device specific information (eg dev/cdrom/info)|
+  | fs/ | Specific filesystems filehandle, inode, dentry and quota tuning binfmt_misc <Documentation/admin-guide/binfmt-misc.rst> |
+  | kernel/ | Global kernel info / tuning miscellaneous stuff |
+  | net/ | Networking stuff, for documentation look in: <Documentation/networking/> |
+  | vm/ | Memory management tuning buffer and cache management |
+  | user/ | Per user per user namespace limits |
 
 **The sysctl Command**
 
@@ -50,13 +51,13 @@
   ```
   sysctl [ OPTIONS ]
   ```
-| Options | Options Meaning |
-| :---: | --- |
-| -a, --all | Display all values currently available. |
-| -e, --ignore | Use this option to ignore errors about unknown keys. |
-| -p [FILENAME}, --load[=FILENAME] | Load in sysctl settings from the file specified or /etc/sysctl.conf if none given. |
-| -r, --pattern pattern | Only apply settings that match pattern. |
-| -w, --write | Use this option when you want to change a sysctl setting. |
+  | Options | Options Meaning |
+  | :---: | --- |
+  | -a, --all | Display all values currently available. |
+  | -e, --ignore | Use this option to ignore errors about unknown keys. |
+  | -p [FILENAME}, --load[=FILENAME] | Load in sysctl settings from the file specified or /etc/sysctl.conf if none given. |
+  | -r, --pattern pattern | Only apply settings that match pattern. |
+  | -w, --write | Use this option when you want to change a sysctl setting. |
 
 - การดูว่า attributes มีอะไรบ้างให้ใช้คำสั่ง -a จะทำการแสดงผล parameters ทั้งหมดที่มีการ config ในปัจจุบัน
   ```
