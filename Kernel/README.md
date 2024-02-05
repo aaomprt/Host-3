@@ -101,6 +101,19 @@
   | /proc/net | Status information about network protocols. |
   | /proc/stat | Various statistics about the system, such as the number of page faults since the system was booted. |
   | /proc/uptime | The length of time the kernel has been running since boot and spent in idle mode (both in seconds). |
+- สามารถหาข้อมูลเกี่ยวกับ kernel ได้ในไฟล์ /proc/version
+  ```
+  host-3@host-3-server$ cat /proc/version
+  Linux version 5.15.0-91-generic (buildd@lcy02-amd64-045) (gcc (Ubuntu 11.4.0-1ubuntu1~22.04)) 11.4.0,
+   GNU 1d (( GNU Bitnutils for Ubantu) 2.38)# 101-Ubuntu SMP Tue Nov 14 13:30:38 UTC 2023
+  ```
+  - 5 -- Kernel version
+  - 15 -- Major revision
+  - 0 -- Minor revision
+  - 91 -- Bug fix
+  - generic - บอกว่ากำลังใช้ Ubantu ที่เป็น Desktop version โดยหากเป็น Server version จะเป็นคำว่า 'server'
+  
+
 
 
 
