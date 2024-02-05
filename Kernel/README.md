@@ -4,7 +4,7 @@
 ------ครึ่งหลัง------------------
 
 ## Kernel Module
-### Configuration
+### Configuration :wrench:
   - คำสั่ง **modprobe** สามารถใช้เพิ่มหรือลบโมดูลได้ โดยมีไฟล์ .conf ทั้งหมดภายในส่วนขยายไดเร็กทอรี /etc/modprobe.d สำหรับระบุตัวเลือกที่จำเป็นสำหรับโมดูลต่างๆ 
   - file configuration สามารถใช้สร้าง alias (นามแฝงสำหรับโมดูล) หรือเปลี่ยนแปลงลักษณะการทำงานของ modprobe ตามความต้องการ
   - ไฟล์ .conf อยู่ในไดเร็กทอรี /etc/modprobe.d และใน Linux เวอร์ชันเก่า จะอยู่ในไฟล์ /etc/modprobe.conf
@@ -27,7 +27,7 @@
   ```
     alias mymod really_long_module_name
   ```
-### Kernel Paramiters
+### Kernel Paramiters :newspaper:
 - ไดเรกทอรี /proc/sys มีไฟล์และไดเรกทอรีหลายรายการที่มีประโยชน์ในการเปลี่ยนแปลงการตั้งค่าของคอนเน็กเตอร์ มีประโยชน์เมื่อต้องการแก้ปัญหาหรือปรับแต่งระบบ Linux
 
   ไดเรกทอรี /proc/sys ถูกแบ่งออกเป็นไดเรกทอรีย่อยได้แก่:
@@ -43,7 +43,7 @@
   | vm/ | Memory management tuning buffer and cache management |
   | user/ | Per user per user namespace limits |
 
-**The sysctl Command**
+**The `sysctl` Command**
 
 - คำสั่ง sysctl เป็นเครื่องมือซอฟต์แวร์ที่อ่านและปรับเปลี่ยนคุณสมบัติของ kernel เช่น เวอร์ชัน, maximum limits, และการตั้งค่าความปลอดภัย
 - สามารถใช้งานได้ทั้งในโหมดแบบอินเทอร์แอคทีฟและแบบสคริปต์
@@ -72,7 +72,7 @@
   dev.cdrom.info = CD-ROM information, Id: cdrom.c 3.20 2003/12/17
   ```
 
-**The sysctl.conf File**
+**The `sysctl.conf` File**
 - systcl preload และ configuration file สามารถกำหนดได้ที่ /etc/sysctl.d/99-sysctl.conf
 - การกำหนดค่าแต่ละอย่างจะอยู่ภายในไฟล์ต่างๆ ภายใน etc/sysctl.d 
 - การเปลี่ยนแปลงตั้งค่าสามารถทำได้ผ่านการจัดการไฟล์หรือใช้ sysctl
@@ -82,8 +82,8 @@
   ```
 - หากต้องการรักษาการเปลี่ยนแปลงระหว่างรีบูต ให้ทำเพิ่มหรือแก้ไขบรรทัดที่ต้องการในไฟล์ /etc/sysctl.d/99-sysctl.conf หรือสร้างไฟล์พารามิเตอร์ที่เกี่ยวข้องในไดเรกทอรี /etc/sysctl.d/
 
-### Monitoring
-**The /proc Directory**
+### Monitoring :desktop_computer:
+**The `/proc` Directory**
 - ไฟล์ /proc เป็น virtual filesystem ตัวหนึ่ง บางครั้งถูกเรียกว่า pseudo-file system ของข้อมูลของ process
 - ถือเป็นศูนย์ควบคุมและข้อมูลสำหรับ kernel เนื่องจากส่วนใหญ่ของเครื่องมือระบบก็เป็นการเรียกใช้ไฟล์ในไดเรกทอรีนี้ ตัวอย่างเช่น 'lsmod' เป็นเหมือนกับ 'cat /proc/modules' เป็นต้น
 - การแก้ไขไฟล์ในไดเรกทอรี จะสามารถอ่าน/แก้ไขพารามิเตอร์ของ kernel(sysctl) ได้ในขณะที่ระบบกำลังทำงาน
@@ -112,7 +112,62 @@
   - 0 -- Minor revision
   - 91 -- Bug fix
   - generic - บอกว่ากำลังใช้ Ubantu ที่เป็น Desktop version โดยหากเป็น Server version จะเป็นคำว่า 'server'
+
+**The `dmesg` Command**
+- แสดงข้อความจากเคอร์เนลริงบัฟเฟอร์ ระบบผ่านระดับการทำงานหลายระดับ เช่น สถาปัตยกรรมระบบ, ซีพียู, อุปกรณ์ที่เชื่อมต่อ, RAM เป็นต้น
+- เมื่อคอมพิวเตอร์บูทขึ้น kernel จะถูกโหลดลงในหน่วยความจำ ในระหว่างช่วงเวลาดังกล่าว จำนวนข้อความจะแสดงขึ้นซึ่งเราสามารถเห็นอุปกรณ์ฮาร์ดแวร์ที่ตรวจพบโดย kernel
+- มีความสำคัญมาในการวินิจฉัยในกรณีที่อุปกรณ์ขัดข้อง เมื่อเราเชื่อมต่อหรือตัดการเชื่อมต่ออุปกรณ์ฮาร์ดแวร์ในระบบ
+- Syntax:
+  ```
+  dmesg [ OPTIONS ]
+  ```
+  | Option Choice | Meaning |
+  | :---: | --- |
+  | -c, --read-clear | Clear the ring buffer after first printing its contents. |
+  | -e, --reltime | Display the local time and the delta in human-readable format. Be aware that conversion to the local time could be inaccurate (see -T for more details). |
+  | -f, --facility list | Restrict output to the given (comma-separated) list of facilities. |
+  | -H, --human | Enable human-readable output. See also --color, --reltime and --nopager. |
+  | -L, --color[=when] | Colorize the output. The optional argument when can be auto, never or always. If the when argument is omitted, it defaults to auto. The colors can be disabled; for the current built-in default see the --help output. See also the COLORS section below. |
+  | -l, --level list | Restrict output to the given (comma-separated) list of levels. |
+- ตัวอย่างผลลัพธ์
+  ```
+  host-3@host-3-server $ dmesg -H
+  [Aug 4 12:58] Linux version 4.15.0-91-generic (buildd@lgw01-amd64-013) (gcc version 
+  [  +0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-4.15.0-91-generic root=UUID=6e7
+  [  +0.000000] KERNEL supported cpus:
+  [  +0.000000]   Intel GenuineIntel
+  [  +0.000000]   AMD AuthenticAMD
+  [  +0.000000]   Centaur CentaurHauls
+  [  +0.000000] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers
+  [  +0.000000] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+  [  +0.000000] x86/fpu: Enabled xstate features 0x3, context size is 576 bytes, using
+  [  +0.000000] e820: BIOS-provided physical RAM map:
+  [  +0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009a7ff] usable
+  [  +0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+  [  +0.000000] BIOS-e820: [mem 0x0000000000100000-0x00000000bfdffbff] usable
+  [  +0.000000] BIOS-e820: [mem 0x00000000bfdffc00-0x00000000bfe53bff] ACPI NVS
+  [  +0.000000] BIOS-e820: [mem 0x00000000bfe53c00-0x00000000bfe55bff] ACPI data
+  [  +0.000000] BIOS-e820: [mem 0x00000000bfe55c00-0x00000000bfffffff] reserved
+  [  +0.000000] BIOS-e820: [mem 0x00000000f8000000-0x00000000fbffffff] reserved
+  [  +0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fed003ff] reserved
+  [  +0.000000] BIOS-e820: [mem 0x00000000fed20000-0x00000000fed9ffff] reserved
+  [  +0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000feefffff] reserved
+  [  +0.000000] BIOS-e820: [mem 0x00000000ffb00000-0x00000000ffffffff] reserved
+  [  +0.000000] BIOS-e820: [mem 0x0000000100000000-0x000000033bffffff] usable
+  [  +0.000000] NX (Execute Disable) protection: active
+  ```
   
+- ในระบบที่เป็นแบบดั้งเดิม บางบรรทัดของ dmesg จะเริ่มต้นด้วยชื่ออุปกรณ์ตามด้วยเครื่องหมายโคลอนแล้วตามด้วยข้อความที่ละเอียดมากขึ้น มักจะปรากฏเป็นกลุ่มที่มีอุปกรณ์เดียวกันปรากฏต่อเนื่องกันในหลายบรรทัด
+
+
+
+
+| References |
+| --- |
+| ( https://eng.libretexts.org/Bookshelves/Computer_Science/Operating_Systems/Linux_-_The_Penguin_Marches_On_(McClanahan)/06%3A_Kernel_Module_Management/3.09%3A_The_dmesg_Command "LibreTexts Engineering" ) |
+| (https://www.linuxadictos.com/th/dmesg-comandos-informacion-solucionar-problemas-linux.html "Linux Adicts")
+
+
 
 
 
