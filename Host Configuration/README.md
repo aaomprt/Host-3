@@ -30,7 +30,7 @@ hostname [ options ] [ new_hostname ]
 การกำหนดค่าวันที่ เวลา และโซนเวลาของเครื่อง Host เพื่อให้เครื่อง Host สามารถแสดงเวลาให้ถูกต้อง ซึ่งสามารถกำหนดได้ผ่านคำสั่ง `timedatectl` หรือผ่านการแก้ไขไฟล์ `/etc/timezone` และ `/etc/localtime`
 #### Syntax:
 ```
- timedatectl [OPTIONS]
+ timedatectl [ OPTIONS ]
 ```
 ซึ่งมี command ในการกำหนดค่าต่างๆ ดังนี้:
 | command | Description |
