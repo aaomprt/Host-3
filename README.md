@@ -27,6 +27,10 @@ Host หมายถึง คอมพิวเตอร์หรือเซ�
 4. Memory<br />
 
 ## Topic :card_index_dividers:
+- Host Configuration :paperclip:
+- Input Output Devices :keyboard:
+- Kernel :pushpin:
+- Memory :floppy_disk:
 
 ## Members :space_invader:
 
