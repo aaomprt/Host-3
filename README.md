@@ -31,7 +31,7 @@ Host หมายถึง คอมพิวเตอร์หรือเซ�
   ```
   $ free
   ```
-## Topic :card_index_dividers:
+## Topic :card_index_dividers: (เดี๋ยวมาลิ้งหน้า)
 - Host Configuration :paperclip: 
 - Input Output Devices :keyboard:
 - Kernel :pushpin:
