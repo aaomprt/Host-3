@@ -25,6 +25,9 @@ hostname [options] [new_hostname]
 | -s | Display the short version of the hostname |
 | -V | Expand all output to verbose |
 
+### 2. Date, Time, Time Zone
+การกำหนดค่าวันที่ เวลา และโซนเวลาของเครื่อง Host เพื่อให้เครื่อง Host สามารถแสดงเวลาให้ถูกต้อง ซึ่งสามารถกำหนดได้ผ่านคำสั่ง `date`, `timedatectl` หรือผ่านการแก้ไขไฟล์ `/etc/timezone` และ `/etc/localtime`
+
 | References |
 | :---: |
 |[Linkedin](https://www.linkedin.com/pulse/hosts-configuration-file-linux-razvan-alexandru-ionica) |
