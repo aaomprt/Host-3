@@ -43,3 +43,5 @@ hostname [ options ] [ new_hostname ]
 | References |
 | :---: |
 |[Linkedin](https://www.linkedin.com/pulse/hosts-configuration-file-linux-razvan-alexandru-ionica) |
+
+### 3. cd
