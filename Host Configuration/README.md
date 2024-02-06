@@ -12,7 +12,7 @@ hostname [options] [new_hostname]
 ```
 โดยในส่วนของ option มีดังนี้:
 | Option        | Description   |
-| ------------- |:-------------:|
+| :-----------: | ------------- |
 | -a | แสดง alias name ของ host ซึ่งถ้าไม่มีจะ return บรรทัดว่างออกมา |
 | -A | แสดง FQDNs (Fully Qualified Domain Name) |
 | -b | set the hostname |
