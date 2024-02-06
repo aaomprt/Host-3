@@ -10,6 +10,6 @@ Host หมายถึง คอมพิวเตอร์หรือเซ�
   ```
   $ cat /etc/hosts
   ```
-1. I/O Devices<br />
-1. Kernel<br />
-1. Memory<br />
+2. I/O Devices<br />
+3. Kernel<br />
+4. Memory<br />
