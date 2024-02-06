@@ -135,11 +135,11 @@
 
    - ตัวอย่างการค้นหาไฟล์ `.ko` ใน /lib/modules/$(uname -r) เมื่อไฟล์ถูกพบ depmod จะทำงานและ จากนั้นจะรันคำสั่ง `modprobe` เพื่อติดตั้งโมดูล
    
-    ```
-    pbmac@pbmac-server $ ln -s /lib/modules/4.15.0-91-generic/kernel/crypto/md4.ko /lib/modules/4.15.0-91-generic/
-    pbmac@pbmac-server $ depmod -a
-    pbmac@pbmac-server $ modprobe md4
-    ```
+      ```
+      pbmac@pbmac-server $ ln -s /lib/modules/4.15.0-91-generic/kernel/crypto/md4.ko /lib/modules/4.15.0-91-generic/
+      pbmac@pbmac-server $ depmod -a
+      pbmac@pbmac-server $ modprobe md4
+      ```
     
 ### Configuration :wrench:
   - คำสั่ง **modprobe** สามารถใช้เพิ่มหรือลบโมดูลได้ โดยมีไฟล์ .conf ทั้งหมดภายในส่วนขยายไดเร็กทอรี /etc/modprobe.d สำหรับระบุตัวเลือกที่จำเป็นสำหรับโมดูลต่างๆ 
