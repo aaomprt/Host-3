@@ -14,13 +14,18 @@ hostname [options] [new_hostname]
 โดยในส่วนของ option มีดังนี้:
 | Option        | Description   |
 | :-----------: | ------------- |
-| -a | แสดง alias name ของ host ซึ่งถ้าไม่มีจะ return บรรทัดว่างออกมา |
-| -A | แสดง FQDNs (Fully Qualified Domain Name) |
-| -b | set the hostname |
-| -d | แสดงชื่อ Domain ของ host |
-| -f | แสดงชื่อ Domain แบบ Fully Qualified Domain Name (FQDN) |
-| -F | set the hostname ที่ระบุในไฟล์ ซึ่งสามารถทำได้โดย superuser(root) เท่านั้น |
-| -i | แสดง IP address ของ host ซึ่งจะใช้ได้เฉพาะในกรณีที่ hostname สามารถแก้ไขได้ |
-| -I | แสดง IP address ของ host ซึ่งจะไม่ขึ้นอยู่กับความสามารถที่ hostname แก้ไขได้ |
-| -s | แสดง hostname แบบย่อ ซึ่งจะอยู่ในส่วนก่อน period/dot(.) |
-| -V | แสดง version ที่เกี่ยวกับ hostname |
+| -a | Displays the alias name of the host |
+| -A | Displays every FQDN (Fully Qualified Domain Name) of the computer |
+| -b | Always set a hostname |
+| -d | Display DNS domain name |
+| -f | Display the FQDN |
+| -F | heck a file to recover and display the hostname |
+| -i | Display the computer’s IP address |
+| -I | Display all of the computer’s network addresses |
+| -s | Display the short version of the hostname |
+| -V | Expand all output to verbose |
+
+| References |
+| :---: |
+|[LibreTexts Engineering]([https://eng.libretexts.org/Bookshelves/Computer_Science/Operating_Systems/Linux_-_The_Penguin_Marches_On_(McClanahan)/06%3A_Kernel_Module_Management/3.09%3A_The_dmesg_Command](https://www.linkedin.com/pulse/hosts-configuration-file-linux-razvan-alexandru-ionica)) |
+|[Linux Adicts](https://www.linuxadictos.com/th/dmesg-comandos-informacion-solucionar-problemas-linux.html) |
