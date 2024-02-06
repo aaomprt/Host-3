@@ -45,3 +45,4 @@ hostname [ options ] [ new_hostname ]
 |[Linkedin](https://www.linkedin.com/pulse/hosts-configuration-file-linux-razvan-alexandru-ionica) |
 
 ### 3. cd
+เป็นคำสั่งที่ใช้ในการเข้าถึงหรือปลี่ยน Directory ปัจจุบันไปยัง Path นั้น
