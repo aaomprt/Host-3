@@ -10,7 +10,7 @@
 ชื่อของเครื่อง Host ซึ่งสามารถกำหนดหรือแก้ไขได้ในไฟล์ `/etc/hostname` หรือผ่านคำสั่ง `hostname`
 #### Syntax:
 ```
-hostname [options] [new_hostname]
+hostname [ options ] [ new_hostname ]
 ```
 โดยในส่วนของ option มีดังนี้:
 | Option        | Description   |
