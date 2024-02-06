@@ -1,9 +1,146 @@
---- kernel ---
-
-
-------ครึ่งหลัง------------------
-
 ## Kernel Module
+**Kernel Module** ทำหน้าที่เหมือนเป็น driver ที่ควบคุมการทำงานส่วนต่างๆ ทั้งในส่วนของฮาร์ดแวร์ รวมถึง file system ที่อยู่ในระบบปฏิบัติการ 
+ข้อดีของ Kernel Module คือ สามารถติดตั้ง หรือนำ Kernel Module ออกไปจากระบบได้อย่างอิสระ โดยไม่จำเป็นต้องไปสร้าง Kernel ตัวใหม่
+
+### Module Location
+- **/lib/modules/$(uname -r)/kernel** คือไดเรกทอรีหลักที่ใช้เก็บโมดูลของ kernel ทั้งหมดที่ถูกติดตั้งในระบบ หากต้องการแทรก ค้นหาไฟล์ หรือลบโมดูลออกจากเคอร์เนล สามารถเข้าไปค้นหาในไดเร็กทอรีโมดูลนี้ได้
+    
+  **Kernel Modules Subdirectories**
+  
+    | Directory | Description |
+    | :---: | --- |
+    | arch | The arch subdirectory contains all of the architecture specific kernel code |
+    | drivers | All of the system's device drivers live in directory |
+    | init | The initialization code for the kernel and start looking at how the kernel works |
+    | include | Kernel headers |
+    | ipc | Code used for process communication |
+    | kernel | The main kernel code. specific in arch/*/kernel |
+    | lib | Misc library routines |
+
+### The `lsmod` Command
+  - lsmod เป็นคำสั่งที่ใช้แสดงรายการโมดูลใน Linux Kernel โดยจะแสดงผลลัพธ์ออกมาเป็นไฟล์ /proc/modules
+  - Syntax:
+    
+    ```
+    lsmod 
+    ```
+  - ตัวอย่างผลลัพธ์
+   
+    ```
+    pbmac@pbmac-server $ lsmod
+    Module                  Size  Used by
+    hid_logitech_hidpp     36864  0
+    hid_logitech_dj        20480  0
+    vmw_vsock_vmci_transport    32768  0
+    vsock                  36864  1 vmw_vsock_vmci_transport
+    vmw_vmci               69632  1 vmw_vsock_vmci_transport 
+    ```
+### The modinfo Command
+  - คำสั่ง **modinfo** ใช้ในการแสดงข้อมูลโมดูลใน Linux Kernel
+  - Syntax:
+    
+    ```
+    modinfo [ OPTION ] [modulename|filename...] 
+    ```
+    
+    **modinfo Command Options**
+  
+    | Options | Options Meaning |
+    | :---: | --- |
+    | -F, --field | Only print this field value, one per line |
+    | -b basedir, --basedir basedir | Root directory for modules, / by default |
+    | -k kernel | Provide information about a kernel other than the running one |
+    | -o, --only-matching | Invert the sense of matching, to select non-matching lines |
+
+  - ตัวอย่าง การแสดงข้อมูลตามชื่อ โดยการใช้ `lsmod` ในการดึงข้อมูลออกมา
+   
+    ```
+    pbmac@pbmac-server $ lsmod
+    Module                  Size  Used by
+    ...
+    vboxdrv               483328  2 vboxnetadp,vboxnetflt
+    pbmac@pbmac-server $ modinfo vboxdrv
+    filename:       /lib/modules/4.15.0-91-generic/misc/vboxdrv.ko
+    version:        6.1.6 r137129 (0x002d0001)
+    license:        GPL
+    description:    Oracle VM VirtualBox Support Driver
+    author:         Oracle Corporation
+    srcversion:     1B117C52DF5B4D7EFB983ED
+    depends:        
+    retpoline:      Y
+    name:           vboxdrv
+    vermagic:       4.15.0-91-generic SMP mod_unload 
+    parm:           force_async_tsc:force the asynchronous TSC mode (int)
+    ```
+### The insmod Command
+  - insmod เป็นคำสั่งที่ใช้เพื่อโหลด(load) โมดูลเคิร์นเนล(kernel module) ลงใน kernel ของระบบ
+  - Syntax:
+    
+    ```
+    insmod [file name] [module-options...] 
+    ```
+  - ตัวอย่างแสดงการรันคำสั่ง `insmod` จากไดเร็กทอรี /lib/modules/$(uname -r) และไฟล์ .ko มีอยู่ในไดเร็กทอรี
+   
+    ```
+    pbmac@pbmac-server $ insmod kernel/drivers/net/wireless/airo.ko
+    pbmac@pbmac-server $ lsmod | grep axnet
+    Module                  Size  Used by
+    airo                   66291  0
+    ```
+
+### The rmmod Command
+  - คำสั่ง rmmod ใช้เพื่อลบโมดูลออกจากเคอร์เนล สามารถใช้ `modprobe` พร้อมกับ `-r` แทนการใช้ rmmod ได้
+  - Syntax:
+    
+    ```
+    rmmod [-f] [-s] [-v] [modulename] 
+    ```
+  - ตัวอย่างการลบโมดูลออก โดยใช้คำสั่ง `lsmod`
+   
+    ```
+    pbmac@pbmac-server $ rmmod axnet
+    pbmac@pbmac-server $ lsmod | grep axnet
+    pbmac@pbmac-server $
+    ```
+### The modprobe Command
+  - modprobe เป็นคำสั่งที่ใช้แสดงรายการ แทรก หรือลบโมดูลออกจากเคอร์เนล โดยจะค้นหาในไดเร็กทอรีโมดูล `/lib/modules/$ (uname -r)`
+  - Syntax:
+    
+    ```
+    modprobe [ OPTIONS ] [modulename] [module parameters...]
+    ```
+    **modinfo Command Options**
+  
+    | Options | Options Meaning |
+    | :---: | --- |
+    | -f --force | Tries to strip any versioning information from the module |
+    | -n, --dry-run, --show | does everything but insert or delete the modules (or run the install or remove commands) |
+    | -v, --verbose | Prints messages about what the program is doing |
+    | -r | `modprobe` to remove a module |
+
+### The depmod Command
+  - depmod เป็นคำสั่งที่ใช้ในการสร้างหรืออัปเดตไฟล์ใน Linux kernel
+   - Syntax:
+    
+      ```
+      depmod [ OPTIONS ] 
+      ```
+      **modinfo Command Options**
+     
+     | Options | Options Meaning |
+     | :---: | --- |
+     | -a --all | Probes all modules |
+     | -C --config file or directory | overrides the default configuration file `at /etc/depmod.conf`  |
+     | -n --dry-run | sends the resulting and the various map files to standard output |
+
+   - ตัวอย่างการค้นหาไฟล์ `.ko` ใน /lib/modules/$(uname -r) เมื่อไฟล์ถูกพบ depmod จะทำงานและ จากนั้นจะรันคำสั่ง `modprobe` เพื่อติดตั้งโมดูล
+   
+    ```
+    pbmac@pbmac-server $ ln -s /lib/modules/4.15.0-91-generic/kernel/crypto/md4.ko /lib/modules/4.15.0-91-generic/
+    pbmac@pbmac-server $ depmod -a
+    pbmac@pbmac-server $ modprobe md4
+    ```
+    
 ### Configuration :wrench:
   - คำสั่ง **modprobe** สามารถใช้เพิ่มหรือลบโมดูลได้ โดยมีไฟล์ .conf ทั้งหมดภายในส่วนขยายไดเร็กทอรี /etc/modprobe.d สำหรับระบุตัวเลือกที่จำเป็นสำหรับโมดูลต่างๆ 
   - file configuration สามารถใช้สร้าง alias (นามแฝงสำหรับโมดูล) หรือเปลี่ยนแปลงลักษณะการทำงานของ modprobe ตามความต้องการ
