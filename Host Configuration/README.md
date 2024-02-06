@@ -44,13 +44,14 @@ hostname [ options ] [ new_hostname ]
 | :---: |
 |[Linkedin](https://www.linkedin.com/pulse/hosts-configuration-file-linux-razvan-alexandru-ionica) |
 
+
 ### 3. cd
-เป็นคำสั่งที่ใช้ในการเข้าถึงหรือปลี่ยน Directory ปัจจุบันไปยัง Path นั้น
-*ย้อน Directory กลับขึ้นไปหนึ่งขั้น
-### ตัวอย่างการใช้คำสั่ง cd:
-```
-$ cd ..
-```
+
+   * ย้อน Directory กลับขึ้นไปหนึ่งขั้น
+     ### ตัวอย่างการใช้คำสั่ง cd:
+     ```
+     $ cd ..
+     ```
 
 
 ### 4. cp
