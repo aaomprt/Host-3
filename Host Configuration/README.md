@@ -5,6 +5,7 @@
 * หลักการทำงานหลักๆของ Host Configuration คือ การจับคู่ (map) domain names หรือ hostnames กับ IP addresses ซึ่งจะสามารถเปลี่ยนเส้นทางการรับส่งข้อมูลไปยัง IP address ที่ต้องการได้ โดย linux จะทำการอ่านไฟล์ /etc/hosts เพื่อให้เข้าใจการกำหนดค่าและการตั้งค่าของเครื่อง host
 
 ## Command
+
 ### 1. hostname
 ชื่อของเครื่อง Host ซึ่งสามารถกำหนดหรือแก้ไขได้ในไฟล์ `/etc/hostname` หรือผ่านคำสั่ง `hostname`
 #### Syntax:
@@ -31,6 +32,13 @@ hostname [options] [new_hostname]
 ```
  timedatectl [OPTIONS]
 ```
+ซึ่งมี command ในการกำหนดค่าต่างๆ ดังนี้:
+| command | Description |
+| ------- | ----------- |
+| set-time [ time ] | Set the system clock to the specified time
+| set-timezone [ timezone ] |  Set the system time zone to the specified value
+| set-ntp [ true or false ] | add Network Time Protocol (NTP) synchronization to maintain the correct time automatically
+
 
 | References |
 | :---: |
