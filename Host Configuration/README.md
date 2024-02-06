@@ -11,3 +11,8 @@
 ```
 hostname [options] [new_hostname]
 ```
+| Option        | Description   |
+| ------------- |:-------------:|
+| -a      | right-aligned |
+| -A      | centered      |
+| zebra stripes | are neat      |
