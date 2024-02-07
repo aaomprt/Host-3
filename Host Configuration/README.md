@@ -16,7 +16,7 @@ hostname [ options ] [ new_hostname ]
 ```
 $ hostname -i
 ```
-โดยในส่วนของ option มีดังนี้:
+#### โดยในส่วนของ option มีดังนี้:
 | Option        | Description   |
 | :-----------: | ------------- |
 | -a | Displays the alias name of the host |
@@ -40,7 +40,7 @@ $ hostname -i
 ```
 $ timedatectl set-ntp true
 ```
-ซึ่งมี command ในการกำหนดค่าต่างๆ ดังนี้:
+#### ซึ่งมี command ในการกำหนดค่าต่างๆ ดังนี้:
 | Command | Description |
 | ------- | ----------- |
 | set-time [ time ] | Set the system clock to the specified time
@@ -125,7 +125,7 @@ $ sudo systemctl status ntp
 ```
 lshw [ -format ] [ -options ]
 ```
-format มีดังนี้:
+#### format มีดังนี้:
 | Format | Description |
 | :----: | ----------- |
 | -html | Output hardware tree as HTML |
@@ -136,7 +136,7 @@ format มีดังนี้:
 ```
 $ sudo lshw -short
 ```
-Option มีดังนี้:
+#### Option มีดังนี้:
 | Option | Description |
 | :----: | ----------- |
 | -class | แสดง hardware บางประเภทเท่านั้น |
