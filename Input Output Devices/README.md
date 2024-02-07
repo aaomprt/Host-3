@@ -302,6 +302,15 @@ block devices เป็นอุปกรณ์จัดเก็บข้อม
 <br><hr><br>
 
 ## :book: References :book:
+- [2daygeek](https://www.2daygeek.com/check-system-hardware-devices-bus-information-lspci-lsscsi-lsusb-lsblk-linux/)<br />
+- [th.linux](https://th.linux-console.net/?p=1357)<br />
+- [borntodev](https://www.borntodev.com/wp-content/uploads/2023/08/cheatsheet-linux-command.pdf)<br />
+- [hostpacific](https://www.hostpacific.com/command-linux/)<br />
+- [Saixiii](https://saixiii.com/what-is-kernel/)<br />
+- [ioflood](https://ioflood.com/blog/lspci-linux-command/)
+
+
+
 |  |
 | --- |
 | [2daygeek](https://www.2daygeek.com/check-system-hardware-devices-bus-information-lspci-lsscsi-lsusb-lsblk-linux/) |
