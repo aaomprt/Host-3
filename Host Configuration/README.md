@@ -113,7 +113,7 @@ vi [options] [file]
 ```
 * ตัวอย่างคำสั่งที่ใช้ในการสร้างไฟล์:
   ```
-  $ $ vi test.txt
+  $ vi test.txt
   ```
 * เขียนหรือแทรกข้อมูลลง file
   #### Option มีดังนี้:
@@ -143,7 +143,7 @@ $ cat [OPTION] [FILE]
 ```
 * ตัวอย่างการใช้คำสั่งในการแสดงข้อมูลในแฟ้ม /etc/passwd
  ```
-$ $cat /etc/passwd
+$ cat /etc/passwd
 ```
 
 #### มี command ที่ใช้ดังนี้:
