@@ -60,7 +60,7 @@
     Module                  Size  Used by
     ...
     vboxdrv               483328  2 vboxnetadp,vboxnetflt
-    pbmac@pbmac-server $ modinfo vboxdrv
+    host-3@host-3-server $ modinfo vboxdrv
     filename:       /lib/modules/4.15.0-91-generic/misc/vboxdrv.ko
     version:        6.1.6 r137129 (0x002d0001)
     license:        GPL
@@ -295,7 +295,7 @@
   [  +0.000000] NX (Execute Disable) protection: active
   ```
   
-- ในระบบที่เป็นแบบดั้งเดิม บางบรรทัดของ dmesg จะเริ่มต้นด้วยชื่ออุปกรณ์ตามด้วยเครื่องหมายโคลอนแล้วตามด้วยข้อความที่ละเอียดมากขึ้น มักจะปรากฏเป็นกลุ่มที่มีอุปกรณ์เดียวกันปรากฏต่อเนื่องกันในหลายบรรทัด
+- ในระบบที่เป็นระบบเก่า บางบรรทัดของ dmesg จะเริ่มต้นด้วยชื่ออุปกรณ์ตามด้วยเครื่องหมายโคลอนแล้วตามด้วยรายละเอียด มักปรากฏเป็นกลุ่มที่มีอุปกรณ์เดียวกันต่อเนื่องกันในหลายบรรทัด
 
 
 
