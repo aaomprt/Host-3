@@ -1,4 +1,4 @@
-# Host Configuration
+# Host Configuration 🔧
 
 
 ## หน้าที่และหลักการทำงานบน Linux
