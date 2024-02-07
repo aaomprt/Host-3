@@ -196,7 +196,7 @@ $ mkdir <dirname>
   ```
   $ sudo apt install ntp
   ```
-* config NTP ได้ในไฟล์ /etc/ntp.conf โดยสามารถเปิดผ่านคำสั่ง:
+* config NTP ได้ในไฟล์ `/etc/ntp.conf` โดยสามารถเปิดผ่านคำสั่ง:
   ```
   $ sudo nano /etc/ntp.conf
   ```
