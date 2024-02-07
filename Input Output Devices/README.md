@@ -133,7 +133,7 @@ I/O ของแต่ละอุปกรณ์ เช่น keyboard, mouse, 
 
 <br><hr><br>
 
-## What’s lsscsi – List scsi Devices
+## :cd: What’s lsscsi – List scsi Devices :cd:
   ![image](https://github.com/aaomprt/Host-3/assets/118121218/9805a937-efaf-455b-a9a0-2d13b398593f)
   lsscsi เป็นคำย่อของ *list small Computer System Interface* ซึ่งเป็นคำสั่งที่ใช้แสดงข้อมูลเกี่ยวกับอุปกรณ์ SCSI/Sata ที่เชื่อมต่อกับระบบ
   มันสแกน sysfs (ติดตั้งที่ /sys) เพื่อรวบรวมข้อมูล ซึ่งได้ถูกนำเข้ามาในซีรีส์เคอร์เนล Linux เวอร์ชัน 2.6
