@@ -1,16 +1,136 @@
-# I/O Devices in Linux
-อุปกรณ์ Input/Output: เป็นอุปกรณ์ที่ให้ข้อมูลเข้าสู่ระบบหรือรับข้อมูลจากระบบ เช่น คีย์บอร์ด, เมาส์, คีย์การ์ด, หน้าจอ, ปริ้นเตอร์, กล้องเว็บแคม, และอุปกรณ์เก็บข้อมูล เมื่อต้องการดูข้อมูลเกี่ยวกับอุปกรณ์ I/O, คำสั่งที่ใช้บ่อยมี lspci (แสดงข้อมูล PCI devices), lsusb (แสดงข้อมูล USB devices) และ lsblk (แสดงข้อมูล block devices)
+# Input/Output(I/O) devices
+อุปกรณ์ Input/Output: เป็นอุปกรณ์ที่ให้ข้อมูลเข้าสู่ระบบหรือรับข้อมูลจากระบบ เช่น คีย์บอร์ด, เมาส์, คีย์การ์ด, หน้าจอ, ปริ้นเตอร์, กล้องเว็บแคม, และอุปกรณ์เก็บข้อมูล
+
+I/O ของแต่ละอุปกรณ์ เช่น keyboard, mouse, disk, printer, network adapter หรือ จอ monitor ทั้งหมดนี้ Kernel จะควบคุมการสื่อสารระหว่าง application และ hardware ให้
+
+มีเครื่องมือหลายตัวที่ใช้สำหรับตรวจสอบข้อมูลฮาร์ดแวร์ของระบบ Linux ได้ บางคำสั่งจะรายงานข้อมูลทั้งหมดเช่น CPU, หน่วยประมวลผล, หน่วยความจำ, การจัดเก็บข้อมูล, ดิสก์ เป็นต้น และบางคำสั่งจะเน้นไปที่ส่วนของอุปกรณ์ฮาร์ดแวร์เฉพาะเช่น CPU, หน่วยประมวลผล, หน่วยความจำ เป็นต้น
+เราจะพูดถึงเครื่องมือสำหรับข้อมูลอุปกรณ์ระบบ Linux เช่น lspci, lsscsi, lsusb, และ lsblk
 
 
-ที่สำคัญและมีความสำคัญในระบบปฏิบัติการ Linux ในส่วนของ I/O Devices (อุปกรณ์ Input/Output) มีหลาย subcomponents ที่ทำหน้าที่ควบคุมและจัดการกับอุปกรณ์ที่ให้บริการ Input และ Output ต่าง ๆ ในระบบ เรามาดูรายละเอียดต่อไปนี้:
+
+* What’s lspci – List PCI Bus Devices:
+  ![image](https://github.com/aaomprt/Host-3/assets/118121218/08b8ae27-b1a1-41d8-b963-78b0090746a2)
+  มาจาก Peripheral Component Interconnect
+  lspci เป็นคำสั่งที่ใช้สำหรับแสดงข้อมูลเกี่ยวกับอุปกรณ์ที่เชื่อมต่อกับ PCI buses ในระบบและอุปกรณ์ฮาร์ดแวร์ที่เชื่อ
+  ต่อกับ PCI และ PCI bus
+  คำสั่ง lspci จะแสดงข้อมูลเกี่ยวกับหมายเลขรุ่น/รายละเอียดของชิปสำหรับอุปกรณ์เช่น PCI bridge, VGA
+  controller, Ethernet controller, USB controller, Audio device, IDE interface ฯลฯ
+  lspci เป็นส่วนหนึ่งของแพคเกจ pciutils
+  
+  สามารถใช้ได้โดยใช้รูปแบบ lspci [option]
+
+* How to install lspci
+  สำหรับ Debian/Ubuntu, ใช้คำสั่ง apt-get หรือ apt เพื่อติดตั้ง pciutils
+  ```
+  $ sudo apt install pciutils
+  ```
+* lspci Usage
+  คำสั่ง lspci ใช้เพื่อแสดงข้อมูลเกี่ยวกับตัวควบคุม PCI ทั้งหมดบนระบบรวมถึงอุปกรณ์ที่เชื่อมต่ออยู่ด้วย
+  อาร์กิวเมนต์ คำอธิบาย ตัวอย่าง
+  ---------- |
+  -v | แสดงผลลัพธ์แบบ verbose เพื่อแสดงข้อมูลเพิ่มเติมเกี่ยวกับแต่ละอุปกรณ์ lspci -v
+  -nn | แสดงรหัสผู้ผลิตและรหัสอุปกรณ์ lspci -nn
+  -k | แสดงไคเนลไดรเวอร์ที่จัดการกับแต่ละอุปกรณ์ lspci -k
+  -t | แสดงอุปกรณ์ในรูปแบบเหมือนต้นไม้ lspci -t
+  -i | ใช้ไฟล์ PCI ID ที่ระบุแทนการใช้ค่าเริ่มต้น lspci -i /path/to/pci.ids
+  -d | แสดงเฉพาะอุปกรณ์ที่มีรหัสผู้ผลิตและรหัสอุปกรณ์ที่ระบุ lspci -d 8086:100e
+  -s | แสดงเฉพาะอุปกรณ์ในบัสที่ระบุ lspci -s 00:02.0
+  -x | แสดงบรรทัดแรกของพื้นที่การกำหนดค่า lspci -x
+  -xxx | แสดงพื้นที่การกำหนดค่าทั้งหมด (เสี่ยงต่อความเสี่ยง; สำหรับ root เท่านั้น) lspci -xxx
+  -A | ใช้วิธีการเข้าถึงที่ระบุเพื่ออ่านพื้นที่การกำหนดค่าฮาร์ดแวร์ PCI lspci -A intel-conf1
+  -D | แสดงหมายเลขโดเมนเสมอ lspci -D
+  -F | อ่านการกำหนดค่าจากไฟล์ที่กำหนด lspci -F dump.txt
+
+  ### ตัวอย่าง: ต้องการดูข้อมูลเกี่ยวกับอุปกรณ์ PCI ให้รันคำสั่งต่อไปนี้
+  ```
+  ~ $ lspci
+  00:00.0 Host bridge: Intel Corporation Haswell-ULT 
+  DRAM Controller (rev 0b)
+  00:02.0 VGA compatible controller: Intel Corporation Haswell-ULT 
+  Integrated Graphics Controller (rev 0b)
+  00:03.0 Audio device: Intel Corporation Haswell-ULT HD Audio Controller
+  (rev 0b)
+  00:14.0 USB controller: Intel Corporation Lynx Point-LP USB xHCI HC 
+  (rev 04)
+  00:16.0 Communication controller: Intel Corporation Lynx Point-LP HECI #0 
+  (rev 04)
+  00:1b.0 Audio device: Intel Corporation Lynx Point-LP HD Audio Controller 
+  (rev 04)
+  00:1c.0 PCI bridge: Intel Corporation Lynx Point-LP PCI Express Root Port 3 
+  (rev e4)
+  00:1c.3 PCI bridge: Intel Corporation Lynx Point-LP PCI Express Root Port 4 
+  (rev e4)
+  00:1c.4 PCI bridge: Intel Corporation Lynx Point-LP PCI Express Root Port 5 
+  (rev e4)
+  00:1d.0 USB controller: Intel Corporation Lynx Point-LP USB EHCI #1 
+  (rev 04)
+  00:1f.0 ISA bridge: Intel Corporation Lynx Point-LP LPC Controller 
+  (rev 04)
+  00:1f.2 SATA controller: Intel Corporation Lynx Point-LP SATA Controller 1 
+  [AHCI mode] (rev 04)
+  00:1f.3 SMBus: Intel Corporation Lynx Point-LP SMBus Controller (rev 04)
+  01:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 
+  PCI Express Gigabit Ethernet Controller (rev 10)
+  02:00.0 Network controller: Realtek Semiconductor Co., Ltd. 
+  RTL8723BE PCIe Wireless Network Adapter
+  03:00.0 3D controller: NVIDIA Corporation GM108M [GeForce 840M] (rev a2)
+
+  ```
 
 
-* Device Drivers (ไดรเวอร์อุปกรณ์): เป็นโปรแกรมที่ทำหน้าที่เป็นตัวกลางระหว่างระบบปฏิบัติการและอุปกรณ์ I/O ต่าง ๆ บนเครื่องคอมพิวเตอร์ ไดรเวอร์จะเป็นพาร์ทของ Kernel และทำหน้าที่แปลงคำสั่งที่ระบบส่งไปให้กับอุปกรณ์เป็นการควบคุมการทำงานของอุปกรณ์นั้น ๆ
-  * คำสั่ง: lsmod (แสดงรายชื่อของ modules ที่กำลังทำงาน)
-    ### ตัวอย่าง: lsmod
-    ```
-    lsmod
-    ```
+  ### ตัวอย่าง: สามารถใช้ตัวเลือก -t เพื่อแสดงเอาต์พุตในรูปแบบ Tree
+  ```
+   ~ $ lspci -t
+  -[0000:00]-+-00.0
+           +-02.0
+           +-03.0
+           +-14.0
+           +-16.0
+           +-1b.0
+           +-1c.0-[01]----00.0
+           +-1c.3-[02]----00.0
+           +-1c.4-[03]----00.0
+           +-1d.0
+           +-1f.0
+           +-1f.2
+           \-1f.3
+
+  ```
+
+
+
+  ### ตัวอย่าง: สามารถใช้ตัวเลือก -v เพื่อแสดงข้อมูลโดยละเอียดเกี่ยวกับอุปกรณ์ที่เชื่อมต่อแต่ละเครื่อง
+  ```
+  ~ $ lspci -v
+  00:00.0 Host bridge: Intel Corporation Haswell-ULT DRAM Controller (rev 0b)
+  	Subsystem: Lenovo Device 3978
+  	Flags: bus master, fast devsel, latency 0
+  	Capabilities: 
+  
+  00:02.0 VGA compatible controller: Intel Corporation Haswell-ULT 
+  Integrated Graphics Controller (rev 0b) (prog-if 00 [VGA controller])
+  	Subsystem: Lenovo Device 380d
+  	Flags: bus master, fast devsel, latency 0, IRQ 62
+  	Memory at c3000000 (64-bit, non-prefetchable) [size=4M]
+  	Memory at d0000000 (64-bit, prefetchable) [size=256M]
+  	I/O ports at 6000 [size=64]
+  	Expansion ROM at  [disabled]
+  	Capabilities: 
+  	Kernel driver in use: i915
+  .....
+
+  ```
+
+
+
+
+* What’s lsscsi – List scsi Devices
+  ![image](https://github.com/aaomprt/Host-3/assets/118121218/9805a937-efaf-455b-a9a0-2d13b398593f)
+
+
+
+
+
 * Input Devices (อุปกรณ์ Input): รวมถึงอุปกรณ์ที่ให้ข้อมูลเข้าสู่ระบบ เช่น คีย์บอร์ด, เมาส์, คีย์การ์ด, และอุปกรณ์เซนเซอร์ต่าง ๆ เช่น กล้ามเนื้อ (joystick), และตัวเลขบนแป้นพิมพ์
     * คำสั่ง: lsinput (แสดงรายชื่อและคุณสมบัติของอุปกรณ์ Input)
       ### ตัวอย่าง: lsinput
