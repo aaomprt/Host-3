@@ -17,7 +17,7 @@ I/O ของแต่ละอุปกรณ์ เช่น keyboard, mouse, 
   controller, Ethernet controller, USB controller, Audio device, IDE interface ฯลฯ
   lspci เป็นส่วนหนึ่งของแพคเกจ pciutils
   
-  สามารถใช้ได้โดยใช้รูปแบบ lspci [option]
+  สามารถใช้ได้โดยใช้รูปแบบ `lspci [option]`
   ### How to install lspci
   สำหรับ Debian/Ubuntu, ใช้คำสั่ง apt-get หรือ apt เพื่อติดตั้ง pciutils
   ```
