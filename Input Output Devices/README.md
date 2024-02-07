@@ -10,7 +10,8 @@ I/O ของแต่ละอุปกรณ์ เช่น keyboard, mouse, 
 
 ### What’s lspci – List PCI Bus Devices:
   ![image](https://github.com/aaomprt/Host-3/assets/118121218/08b8ae27-b1a1-41d8-b963-78b0090746a2)
-  มาจาก *Peripheral Component Interconnect*
+  มาจาก *Peripheral Component Interconnect* <br>
+  
   lspci เป็นคำสั่งที่ใช้สำหรับแสดงข้อมูลเกี่ยวกับอุปกรณ์ที่เชื่อมต่อกับ PCI buses ในระบบและอุปกรณ์ฮาร์ดแวร์ที่เชื่อม
   ต่อกับ PCI และ PCI bus
   คำสั่ง lspci จะแสดงข้อมูลเกี่ยวกับหมายเลขรุ่น/รายละเอียดของชิปสำหรับอุปกรณ์เช่น PCI bridge, VGA
