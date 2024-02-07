@@ -119,5 +119,36 @@ $ sudo systemctl status ntp
 ```
 
 ### 12. lshw
+ใช้แสดงรายละเอียดเกี่ยวกับฮาร์ดแวร์ของเครื่อง Host เช่น CPU, RAM, และอุปกรณ์อื่นๆ โดยสามารถติดตั้งได้ผ่านการใช้คำสั่ง `sudo apt install lshw` และใช้คำสั่ง `lshw` เพื่อแสดงข้อมูล
+
+#### Syntax:
+```
+lshw [ -format ] [ -options ]
+```
+format มีดังนี้:
+| Format | Description |
+| *----* | ----------- |
+| -html | Output hardware tree as HTML |
+| -xml | Output hardware tree as XML |
+| -short | Output hardware paths |
+| -businfo | Output bus information |
+#### ตัวอย่างการใช้คำสั่ง lshw with format:
+```
+$ sudo lshw -short
+```
+Option มีดังนี้:
+| Option | Description |
+| *----* | ----------- |
+| -class | แสดง hardware บางประเภทเท่านั้น |
+| -disable, -enable | เปิดหรือปิด test เช่น pci, isapnp, cpuid, usb, network, dmi, device-tree, cpuinfo, spd, etc. |
+| -quiet | ไม่ต้องการให้แสดงสถานะ (status) |
+| -sanitize | output โดยไม่ให้แสดง sensitive information |
+| -numeric | แสดง ID สำหรับ PCI, USB, etc |
+| -version | แสดง version ของ lshw |
+| -help | แสดงข้อมูลคำสั่งที่เกี่ยวข้อง |
+#### ตัวอย่างการใช้คำสั่ง lshw with option:
+```
+$ sudo lshw -sanitize
+```
 
 ### 13. lscpu
