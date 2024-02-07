@@ -301,7 +301,7 @@ block devices เป็นอุปกรณ์จัดเก็บข้อม
 
 <br><hr><br>
 
-## References :book:
+## :book: References
 |  |
 | --- |
 | [2daygeek](https://www.2daygeek.com/check-system-hardware-devices-bus-information-lspci-lsscsi-lsusb-lsblk-linux/) |
