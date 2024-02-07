@@ -28,7 +28,7 @@
   - ตัวอย่างผลลัพธ์
    
     ```
-    pbmac@pbmac-server $ lsmod
+    host-3@host-3-server $ lsmod
     Module                  Size  Used by
     hid_logitech_hidpp     36864  0
     hid_logitech_dj        20480  0
@@ -56,7 +56,7 @@
   - ตัวอย่าง การแสดงข้อมูลตามชื่อ โดยการใช้ `lsmod` ในการดึงข้อมูลออกมา
    
     ```
-    pbmac@pbmac-server $ lsmod
+    host-3@host-3-server $ lsmod
     Module                  Size  Used by
     ...
     vboxdrv               483328  2 vboxnetadp,vboxnetflt
@@ -83,8 +83,8 @@
   - ตัวอย่างแสดงการรันคำสั่ง `insmod` จากไดเร็กทอรี /lib/modules/$(uname -r) และไฟล์ .ko มีอยู่ในไดเร็กทอรี
    
     ```
-    pbmac@pbmac-server $ insmod kernel/drivers/net/wireless/airo.ko
-    pbmac@pbmac-server $ lsmod | grep axnet
+    host-3@host-3-server $ insmod kernel/drivers/net/wireless/airo.ko
+    host-3@host-3-server $ lsmod | grep axnet
     Module                  Size  Used by
     airo                   66291  0
     ```
@@ -99,9 +99,9 @@
   - ตัวอย่างการลบโมดูลออก โดยใช้คำสั่ง `lsmod`
    
     ```
-    pbmac@pbmac-server $ rmmod axnet
-    pbmac@pbmac-server $ lsmod | grep axnet
-    pbmac@pbmac-server $
+    host-3@host-3-server $ rmmod axnet
+    host-3@host-3-server $ lsmod | grep axnet
+    host-3@host-3-server $
     ```
 ### The `modprobe` Command :page_facing_up:
   - modprobe เป็นคำสั่งที่ใช้แสดงรายการ แทรก หรือลบโมดูลออกจากเคอร์เนล โดยจะค้นหาในไดเร็กทอรีโมดูล `/lib/modules/$ (uname -r)`
@@ -137,9 +137,9 @@
    - ตัวอย่างการค้นหาไฟล์ `.ko` ใน /lib/modules/$(uname -r) เมื่อไฟล์ถูกพบ depmod จะทำงานและ จากนั้นจะรันคำสั่ง `modprobe` เพื่อติดตั้งโมดูล
    
       ```
-      pbmac@pbmac-server $ ln -s /lib/modules/4.15.0-91-generic/kernel/crypto/md4.ko /lib/modules/4.15.0-91-generic/
-      pbmac@pbmac-server $ depmod -a
-      pbmac@pbmac-server $ modprobe md4
+      host-3@host-3-server $ ln -s /lib/modules/4.15.0-91-generic/kernel/crypto/md4.ko /lib/modules/4.15.0-91-generic/
+      host-3@host-3-server $ depmod -a
+      host-3@host-3-server $ modprobe md4
       ```
     
 ### Configuration :wrench:
@@ -223,8 +223,7 @@
 ### Monitoring :desktop_computer:
 **The `/proc` Directory**
 - ไฟล์ /proc เป็น virtual filesystem ตัวหนึ่ง บางครั้งถูกเรียกว่า pseudo-file system ของข้อมูลของ process
-- ถือเป็นศูนย์ควบคุมและข้อมูลสำหรับ kernel เนื่องจากส่วนใหญ่ของเครื่องมือระบบก็เป็นการเรียกใช้ไฟล์ในไดเรกทอรีนี้ ตัวอย่างเช่น 'lsmod' เป็นเหมือนกับ 'cat /proc/modules' เป็นต้น
-- การแก้ไขไฟล์ในไดเรกทอรี จะสามารถอ่าน/แก้ไขพารามิเตอร์ของ kernel(sysctl) ได้ในขณะที่ระบบกำลังทำงาน
+- ถือเป็นศูนย์ควบคุมและรวบรวมข้อมูลสำหรับ kernel เนื่องจากคำสั่งส่วนใหญ่เป็นการเรียกใช้ไฟล์ในไดเรกทอรีนี้ ตัวอย่างเช่น 'lsmod' คือการเรียก 'cat /proc/modules' เป็นต้น
   
   | Directories | Contentents |
   | :---: | --- |
@@ -245,6 +244,7 @@
   Linux version 5.15.0-91-generic (buildd@lcy02-amd64-045) (gcc (Ubuntu 11.4.0-1ubuntu1~22.04)) 11.4.0,
    GNU 1d (( GNU Bitnutils for Ubantu) 2.38)# 101-Ubuntu SMP Tue Nov 14 13:30:38 UTC 2023
   ```
+  ความหมายของผลลัพธ์
   - 5 -- Kernel version
   - 15 -- Major revision
   - 0 -- Minor revision
@@ -252,9 +252,9 @@
   - generic - บอกว่ากำลังใช้ Ubantu ที่เป็น Desktop version โดยหากเป็น Server version จะเป็นคำว่า 'server'
 
 **The `dmesg` Command**
-- แสดงข้อความจากเคอร์เนลริงบัฟเฟอร์ ระบบผ่านระดับการทำงานหลายระดับ เช่น สถาปัตยกรรมระบบ, ซีพียู, อุปกรณ์ที่เชื่อมต่อ, RAM เป็นต้น
-- เมื่อคอมพิวเตอร์บูทขึ้น kernel จะถูกโหลดลงในหน่วยความจำ ในระหว่างช่วงเวลาดังกล่าว จำนวนข้อความจะแสดงขึ้นซึ่งเราสามารถเห็นอุปกรณ์ฮาร์ดแวร์ที่ตรวจพบโดย kernel
-- มีความสำคัญมาในการวินิจฉัยในกรณีที่อุปกรณ์ขัดข้อง เมื่อเราเชื่อมต่อหรือตัดการเชื่อมต่ออุปกรณ์ฮาร์ดแวร์ในระบบ
+- ใช้เพื่อเขียนข้อความเคอร์เนลบน Linux และระบบปฏิบัติการที่คล้าย Unix อื่น ๆ บนเอาต์พุตมาตรฐานในรูปแบบที่เป็นระเบียบมากขึ้น
+- dmesg ใช้สำหรับตรวจสอบหรือควบคุมบัฟเฟอร์วงแหวนเคอร์เนล การดำเนินการเริ่มต้นคือการแสดงข้อความทั้งหมดในบัฟเฟอร์วงแหวนเคอร์เนล
+- ข้อความที่สร้างโดยเคอร์เนลเป็นส่วนพื้นฐานของการ monitoring เนื่องจากในกรณีที่อุปกรณ์ล้มเหลวเราจะมีการสรุปเกี่ยวกับสิ่งที่เกิดขึ้นและใช้มาตรการสนับสนุนที่จำเป็น เมื่อเชื่อมต่อหรือยกเลิกการเชื่อมต่ออุปกรณ์ฮาร์ดแวร์ในระบบ
 - Syntax:
   ```
   dmesg [ OPTIONS ]
@@ -271,7 +271,7 @@
   ```
   host-3@host-3-server $ dmesg -H
   [Aug 4 12:58] Linux version 4.15.0-91-generic (buildd@lgw01-amd64-013) (gcc version 
-  [  +0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-4.15.0-91-generic root=UUID=6e7
+  [  +0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-5.15.0-91-generic root=UUID=6e7
   [  +0.000000] KERNEL supported cpus:
   [  +0.000000]   Intel GenuineIntel
   [  +0.000000]   AMD AuthenticAMD
@@ -304,6 +304,7 @@
 | :---: |
 |[LibreTexts Engineering](https://eng.libretexts.org/Bookshelves/Computer_Science/Operating_Systems/Linux_-_The_Penguin_Marches_On_(McClanahan)/06%3A_Kernel_Module_Management/3.09%3A_The_dmesg_Command) |
 |[Linux Adicts](https://www.linuxadictos.com/th/dmesg-comandos-informacion-solucionar-problemas-linux.html) |
+|[Admin Info](https://th.admininfo.info/qu-hace-y-c-mo-usar-el-comando-dmesg-linux)|
 
 
 
