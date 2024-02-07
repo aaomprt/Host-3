@@ -8,3 +8,4 @@ https://techspace.co.th/blog/ram-harddisk-storage/#:~:text=HDD%2C%20SSD%20%E0%B8
 https://en.wikipedia.org/wiki/Virtual_memory
 https://en.wikipedia.org/wiki/Memory_paging
 https://bjpcjp.github.io/pdfs/devops/linux-commands-handbook.pdf (****ref ใหม่)
+https://phoenixnap.com/kb/linux-commands-check-memory-usage (****ref ใหม่ อีกแล้ว)
