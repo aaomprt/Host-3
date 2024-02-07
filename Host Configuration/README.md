@@ -137,45 +137,26 @@ vi [options] [file]
 
 ### 8. cat
 ใช้รวมข้อมูล file รวมถึงแสดงผลข้อมูลออกมาในรูปแบบ text
-
-*to display file content
 ### Syntax:
 ```
-$ cat <fileName> 
+$ cat [OPTION] [FILE]
 ```
-**ตัวอย่างการใช้งาน
-```
-$ cat jtp.txt  
-```
-*to create a file
-### Syntax:
-```
-$ cat > <file name>   
-```
-**ตัวอย่างการใช้งาน
-```
-$ ccat > jpt 
-```
-*To Append the Content of A File
-### Syntax:
-```
-cat >> (file name)    
-```
-**ตัวอย่างการใช้งาน
-```
-$ ccat >> jpt 
-```
-*to copy file
-### Syntax:
-```
-$ cat (older file name) > (newer file name)      
+* ตัวอย่างการใช้คำสั่งในการแสดงข้อมูลในแฟ้ม /etc/passwd
+ ```
+$ $cat /etc/passwd
 ```
 
-*to concatenate files
-### Syntax:
-```
-cat <filename1> <filename2>....  > <newFilename>       
-```
+#### มี command ที่ใช้ดังนี้:
+| Command | Description |
+| ------- | ----------- |
+| cat > [fileName] | To create a file.
+| cat [oldfile] > [newfile] | To copy content from older to new file.
+| cat [file1 file2 and so on] > [new file name] | To concatenate contents of multiple files into one.
+| cat -n/cat -b [fileName]	| To display line numbers.
+| cat -e [fileName] | To display $ character at the end of each line.
+| cat [fileName] <<EOF | Used as page end marker.
+
+
 
 
 
