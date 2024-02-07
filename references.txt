@@ -1,8 +1,7 @@
----- แปะ source ที่นี่ (เดี๋ยวกลับมาจัด)----
-1.Host Configuration
-https://www.linkedin.com/pulse/hosts-configuration-file-linux-razvan-alexandru-ionica
-https://linuxconfig.org/hosts-file-example-on-linux
-2.I/O Devices
+# Host Configuration
+[linkedin](https://www.linkedin.com/pulse/hosts-configuration-file-linux-razvan-alexandru-ionica)
+[linuxconfig](https://linuxconfig.org/hosts-file-example-on-linux)
+# I/O Devices
 3.Kernel
 https://www.geeksforgeeks.org/depmod-command-in-linux-with-examples/
 4.Memory
