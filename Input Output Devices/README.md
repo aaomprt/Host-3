@@ -8,7 +8,7 @@ I/O ของแต่ละอุปกรณ์ เช่น keyboard, mouse, 
 
 <br><hr><br>
 
-### What’s lspci – List PCI Bus Devices: :busstop: :bus:
+### What’s lspci – List PCI Bus Devices: :busstop::bus:
   ![image](https://github.com/aaomprt/Host-3/assets/118121218/08b8ae27-b1a1-41d8-b963-78b0090746a2)
   มาจาก *Peripheral Component Interconnect* <br>
   
