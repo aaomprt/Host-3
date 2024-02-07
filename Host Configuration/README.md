@@ -96,25 +96,25 @@ $ cd
 ### 11. NTP
 เป็นการสั่งให้เครื่อง Host ซึ่งทำหน้าที่เป็น NTP client ใช้เวลาจากเซิร์ฟเวอร์ NTP โดยสามารถปรับปรุงเวลาได้อัตโนมัติ ทำได้โดยการติดตั้งและกำหนดค่าแพ็กเกจ ntp และทำการกำหนดค่าในไฟล์ `/etc/ntp.conf`
 * Update the package:
-```
-$ sudo apt update
-```
+  ```
+  $ sudo apt update
+  ```
 * Install the NTP package:
-```
-$ sudo apt install ntp
-```
+  ```
+  $ sudo apt install ntp
+  ```
 * config NTP ได้ในไฟล์ /etc/ntp.conf โดยสามารถเปิดผ่านคำสั่ง:
-```
-$ sudo nano /etc/ntp.conf
-```
+  ```
+  $ sudo nano /etc/ntp.conf
+  ```
 * Restart the NTP เพื่อ apply ไฟล์ที่เรา config ไป
-```
-$ sudo systemctl restart ntp
-```
+  ```
+  $ sudo systemctl restart ntp
+  ```
 * ตรวจสอบว่า NTP สามารถทำงานได้ถูกต้อง โดยใช้คำสั่ง:
-```
-$ sudo systemctl status ntp
-```
+  ```
+  $ sudo systemctl status ntp
+  ```
 
 ### 12. lshw
 ใช้แสดงรายละเอียดเกี่ยวกับฮาร์ดแวร์ของเครื่อง Host เช่น CPU, RAM, และอุปกรณ์อื่นๆ โดยสามารถติดตั้งได้ผ่านการใช้คำสั่ง `sudo apt install lshw` และใช้คำสั่ง `lshw` เพื่อแสดงข้อมูล
