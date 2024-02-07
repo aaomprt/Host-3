@@ -49,23 +49,25 @@ Unevictable:			27760 	kB
 DirectMap4K:			69568	kB
 DirectMap2M:			2027520	kB
 ```
+> **_NOTE:_** อาจใช้คำสั่งเพื่อการแสดงผล หรือเพื่อการค้นหาที่เกี่ยวข้องเพิ่มเติม เพื่อช่วยกรองข้อมูลที่ต้องการ
+
+| Command | Description |
+| :----: | ----------- |
+| cat /proc/meminfo \| more | คำสั่งอ่านข้อมูลโดยแสดงทีละหน้า |
+| cat /proc/meminfo \| grep "topic" | คำสั่งหา topic ที่ต้องการ |
 ---
 2. free
 ```
 $ free
 ```
 ```
-		total		used		free		shared		buff/cache	available
+	total		used		free		shared		buff/cache	available
 Mem:	2011236		190156		1531000		1080		290080		1669380
-Swap:	1531224		1383396		0			1383396
+Swap:	1531224		1383396		0		1383396
 ```
 ---
 3. top
 ```
 $ top
 ```
-```
-		total		used		free		shared		buff/cache	available
-Mem:	2011236		190156		1531000		1080		290080		1669380
-Swap:	1531224		1383396		0			1383396
-```
+![image](https://github.com/aaomprt/Host-3/assets/117189340/fe8886de-a45f-4b38-af03-d6f382b18bfd)
