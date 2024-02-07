@@ -1,9 +1,0 @@
-# Host Configuration
-[linkedin](https://www.linkedin.com/pulse/hosts-configuration-file-linux-razvan-alexandru-ionica)
-[linuxconfig](https://linuxconfig.org/hosts-file-example-on-linux)
-# I/O Devices
-3.Kernel
-https://www.geeksforgeeks.org/depmod-command-in-linux-with-examples/
-4.Memory
-https://saixiii.com/free-linux-command/
-https://www.site24x7.com/learn/linux/optimize-memory.html
