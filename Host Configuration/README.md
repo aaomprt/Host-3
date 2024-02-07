@@ -36,6 +36,10 @@ $ hostname -i
 ```
  timedatectl [ OPTIONS ]
 ```
+#### ตัวอย่างการใช้คำสั่ง timedatectl:
+```
+$ timedatectl set-ntp true
+```
 ซึ่งมี command ในการกำหนดค่าต่างๆ ดังนี้:
 | Command | Description |
 | ------- | ----------- |
@@ -43,10 +47,6 @@ $ hostname -i
 | set-timezone [ timezone ] |  Set the system time zone to the specified value
 | set-ntp [ true or false ] | add Network Time Protocol (NTP) synchronization to maintain the correct time automatically
 
-#### ตัวอย่างการใช้คำสั่ง timedatectl:
-```
-$ timedatectl set-ntp true
-```
 
 | References |
 | :---: |
