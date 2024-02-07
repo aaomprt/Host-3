@@ -127,7 +127,7 @@ lshw [ -format ] [ -options ]
 ```
 format มีดังนี้:
 | Format | Description |
-| *----* | ----------- |
+| :----: | ----------- |
 | -html | Output hardware tree as HTML |
 | -xml | Output hardware tree as XML |
 | -short | Output hardware paths |
@@ -138,7 +138,7 @@ $ sudo lshw -short
 ```
 Option มีดังนี้:
 | Option | Description |
-| *----* | ----------- |
+| :----: | ----------- |
 | -class | แสดง hardware บางประเภทเท่านั้น |
 | -disable, -enable | เปิดหรือปิด test เช่น pci, isapnp, cpuid, usb, network, dmi, device-tree, cpuinfo, spd, etc. |
 | -quiet | ไม่ต้องการให้แสดงสถานะ (status) |
