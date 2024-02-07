@@ -172,7 +172,7 @@ I/O ของแต่ละอุปกรณ์ เช่น keyboard, mouse, 
 
 <br><hr><br>
 
-## What’s lsusb – List USB buses and device
+## :electric_plug: What’s lsusb – List USB buses and device :electric_plug:
 ![image](https://github.com/aaomprt/Host-3/assets/118121218/f320a47e-2f06-476e-8f21-6d079cb0a323)
 lsusb ย่อมาจาก *list Universal Serial Bus* หรือ USB คำสั่งนี้จะแสดงข้อมูลเกี่ยวกับบัส USB ในระบบและอุปกรณ์ที่เชื่อมต่อกับบัสเหล่านั้น การใช้คำสั่งนี้จะแสดงรายการของอุปกรณ์ USB ทั้งหมดที่เชื่อมต่อกับคอมพิวเตอร์ เช่น แป้นพิมพ์ และเม้าส์ เครื่องพิมพ์ ไดรฟ์ดิสก์ เครือข่ายอะแดปเตอร์ ฯลฯ
 
