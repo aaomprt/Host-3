@@ -130,7 +130,7 @@ I/O ของแต่ละอุปกรณ์ เช่น keyboard, mouse, 
   ```
 
 
-<br>
+<br><hr>
 
 ### What’s lsscsi – List scsi Devices
   ![image](https://github.com/aaomprt/Host-3/assets/118121218/9805a937-efaf-455b-a9a0-2d13b398593f)
@@ -169,7 +169,7 @@ I/O ของแต่ละอุปกรณ์ เช่น keyboard, mouse, 
   ```
 
 
-<br>
+<br><hr>
 
 ### What’s lsusb – List USB buses and device
 ![image](https://github.com/aaomprt/Host-3/assets/118121218/f320a47e-2f06-476e-8f21-6d079cb0a323)
@@ -208,7 +208,7 @@ lsusb มีอยู่ในเรสโพรสิทอรี สำหร�
    ~ $ lsusb -v
   ```
 
-<br>
+<br><hr>
 
 ### What’s lsblk – List block devices
 
@@ -294,7 +294,7 @@ block devices เป็นอุปกรณ์จัดเก็บข้อม
   ```
 
 
-
+<br><hr>
 
 | References |
 | ---------- |
