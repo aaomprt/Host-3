@@ -127,7 +127,7 @@ vi [options] [file]
  | -class | เปลี่ยนตัวอักษรทับหลายๆตัว |
  
 * คำสั่งจัดการ file
-  #### Option มีดังนี้:
+#### Option มีดังนี้:
 | Option | Description |
 | :----: | ----------- |
 | :w | save file |
@@ -139,9 +139,9 @@ vi [options] [file]
  | e + name |  โหลด file เพื่อแก้ไข และเลือน cursor ไปบรรทัดสุดท้าย |
   | :e +n name	 |   โหลด file เพื่อแก้ไข และเลือน cursor ไปบรรทัด n |
   | :e # |  แก้ไข file อันใหม่ |
-   | ^^ |  เหมือน  :e # |
-    | :w name | save ข้อมูลลง file ใหม่ |
-    | :w! name |  save ข้อมูลทับลง file เดิม |
+  | ^^ |  เหมือน  :e # |
+  | :w name | save ข้อมูลลง file ใหม่ |
+  | :w! name |  save ข้อมูลทับลง file เดิม |
  
 
 
