@@ -8,7 +8,7 @@
 - [borntodev](https://www.borntodev.com/wp-content/uploads/2023/08/cheatsheet-linux-command.pdf)<br />
 - [hostpacific](https://www.hostpacific.com/command-linux/)
 
-## Kernel
+## Kernel :penguin:
 - [geeksforgeeks](https://www.geeksforgeeks.org/depmod-command-in-linux-with-examples/)<br />
 - [hostpacific](https://www.hostpacific.com/command-linux/)<br />
 - [linuxadictors](https://www.linuxadictos.com/th/dmesg-comandos-informacion-solucionar-problemas-linux.html)<br />
