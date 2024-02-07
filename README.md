@@ -33,9 +33,9 @@ Host หมายถึง คอมพิวเตอร์หรือเซ�
   ```
 ## Topic :card_index_dividers: (เดี๋ยวมาลิ้งหน้า)
 - [Host Configuration](https://github.com/aaomprt/Host-3/tree/main/Host%20Configuration) :paperclip:
-- Input Output Devices :keyboard:
-- Kernel :pushpin:
-- Memory :floppy_disk:
+- [Input Output Devices](https://github.com/aaomprt/Host-3/tree/main/Input%20Output%20Devices) :keyboard:
+- [Kernel](https://github.com/aaomprt/Host-3/tree/main/Kernel) :pushpin:
+- [Memory](https://github.com/aaomprt/Host-3/tree/main/Memory) :floppy_disk:
 
 ## Members :space_invader:
 
@@ -49,4 +49,4 @@ Host หมายถึง คอมพิวเตอร์หรือเซ�
 | 65070137  | นางสาวปานฤทัย ผิวสุข  | Host Configuration | pic |
 | 65070145  | นางสาวพรรณราย สุคง  | Input and Output Devices | pic |
 
-## Reference :unlock:
+## [Reference](https://github.com/aaomprt/Host-3/blob/main/references.txt) :unlock:
