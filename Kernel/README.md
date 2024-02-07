@@ -1,4 +1,4 @@
-# Kernel :penguin:
+# :penguin: Kernel :penguin:
 ### Kernel Module :notebook:
 **Kernel Module** ทำหน้าที่เหมือนเป็น driver ที่ควบคุมการทำงานส่วนต่างๆ ทั้งในส่วนของฮาร์ดแวร์ รวมถึง file system ที่อยู่ในระบบปฏิบัติการ 
 ข้อดีของ Kernel Module คือ สามารถติดตั้ง หรือนำ Kernel Module ออกไปจากระบบได้อย่างอิสระ โดยไม่จำเป็นต้องไปสร้าง Kernel ตัวใหม่
