@@ -293,3 +293,5 @@ References |
 [th.linux-console](https://th.linux-console.net/?p=1357)
 [borntodev](https://www.borntodev.com/wp-content/uploads/2023/08/cheatsheet-linux-command.pdf)
 [hostpacific](https://www.hostpacific.com/command-linux/)
+[Saixiii]([https://www.hostpacific.com/command-linux/](https://saixiii.com/what-is-kernel/)https://saixiii.com/what-is-kernel/)
+[ioflood]([[https://www.hostpacific.com/command-linux/](https://saixiii.com/what-is-kernel/)https://saixiii.com/what-is-kernel/](https://ioflood.com/blog/lspci-linux-command/)https://ioflood.com/blog/lspci-linux-command/)
