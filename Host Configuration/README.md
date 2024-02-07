@@ -152,3 +152,28 @@ $ sudo lshw -sanitize
 ```
 
 ### 13. lscpu
+แสดงข้อมูลเกี่ยวกับ CPU ของเครื่อง Host เช่น ยี่ห้อ, รุ่น, ความเร็ว และคุณสมบัติอื่นๆ โดยสามารถเรียกใช้ได้โดยใช้คำสั่ง `lscpu`
+
+#### Syntax:
+```
+lscpu [ options ]
+```
+| Option | Description |
+| :----: | ----------- |
+| -e | CPU information in human-readable format |
+| -p | Optimizes the command output for easy parsing |
+| -c | Limits the output to offline CPUs |
+| -b | Allows the output to only online CPUs |
+| -a | Includes online and offline CPU lines in the output |
+| -x | Uses hexadecimal masks for CPU sets |
+| -J | Uses JSON output format for the default summary or extended output |
+| -C | Displays details about CPU caches |
+| -B | Shows the sizes in bytes rather than in a human-readable format |
+| --output-all | Prints all available columns |
+| --hierarchic[=when] | Uses subsections in summary output |
+| -s | Gathers CPU info for a Linux instance different from the instance from which the lscpu command is issued |
+| -y | Displays physical IDs for all columns with topology elements (core, socket, etc.) |
+#### ตัวอย่างการใช้คำสั่ง lscpu:
+```
+$ lscpu -e
+```
