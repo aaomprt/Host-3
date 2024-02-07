@@ -49,4 +49,4 @@ Host หมายถึง คอมพิวเตอร์หรือเซ�
 | 65070137  | นางสาวปานฤทัย ผิวสุข  | Host Configuration | pic |
 | 65070145  | นางสาวพรรณราย สุคง  | Input and Output Devices | pic |
 
-## [Reference]([https://github.com/aaomprt/Host-3/blob/main/references.txt](https://github.com/aaomprt/Host-3/blob/main/references.md)https://github.com/aaomprt/Host-3/blob/main/references.md) :unlock:
+## [Reference](https://github.com/aaomprt/Host-3/blob/main/references.md) :unlock:
