@@ -53,6 +53,7 @@ I/O ของแต่ละอุปกรณ์ เช่น keyboard, mouse, 
   ### ตัวอย่าง: ต้องการดูข้อมูลเกี่ยวกับอุปกรณ์ PCI ให้รันคำสั่งต่อไปนี้
   ```
   ~ $ lspci
+
   00:00.0 Host bridge: Intel Corporation Haswell-ULT 
   DRAM Controller (rev 0b)
   00:02.0 VGA compatible controller: Intel Corporation Haswell-ULT 
@@ -90,6 +91,7 @@ I/O ของแต่ละอุปกรณ์ เช่น keyboard, mouse, 
   ### ตัวอย่าง: สามารถใช้ตัวเลือก -t เพื่อแสดงเอาต์พุตในรูปแบบ Tree :deciduous_tree:
   ```
    ~ $ lspci -t
+
   -[0000:00]-+-00.0
            +-02.0
            +-03.0
@@ -111,6 +113,7 @@ I/O ของแต่ละอุปกรณ์ เช่น keyboard, mouse, 
   ### ตัวอย่าง: สามารถใช้ตัวเลือก -v เพื่อแสดงข้อมูลโดยละเอียดเกี่ยวกับอุปกรณ์ที่เชื่อมต่อแต่ละเครื่อง
   ```
   ~ $ lspci -v
+
   00:00.0 Host bridge: Intel Corporation Haswell-ULT DRAM Controller (rev 0b)
   	Subsystem: Lenovo Device 3978
   	Flags: bus master, fast devsel, latency 0
