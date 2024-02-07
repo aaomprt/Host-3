@@ -12,6 +12,10 @@
 ```
 hostname [ options ] [ new_hostname ]
 ```
+#### ตัวอย่างการใช้คำสั่ง hostname:
+```
+$ hostname -i
+```
 โดยในส่วนของ option มีดังนี้:
 | Option        | Description   |
 | :-----------: | ------------- |
@@ -33,12 +37,16 @@ hostname [ options ] [ new_hostname ]
  timedatectl [ OPTIONS ]
 ```
 ซึ่งมี command ในการกำหนดค่าต่างๆ ดังนี้:
-| command | Description |
+| Command | Description |
 | ------- | ----------- |
 | set-time [ time ] | Set the system clock to the specified time
 | set-timezone [ timezone ] |  Set the system time zone to the specified value
 | set-ntp [ true or false ] | add Network Time Protocol (NTP) synchronization to maintain the correct time automatically
 
+#### ตัวอย่างการใช้คำสั่ง timedatectl:
+```
+$ timedatectl set-ntp true
+```
 
 | References |
 | :---: |
