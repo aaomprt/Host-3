@@ -11,7 +11,7 @@ I/O ของแต่ละอุปกรณ์ เช่น keyboard, mouse, 
 ### What’s lspci – List PCI Bus Devices:
   ![image](https://github.com/aaomprt/Host-3/assets/118121218/08b8ae27-b1a1-41d8-b963-78b0090746a2)
   มาจาก Peripheral Component Interconnect
-  lspci เป็นคำสั่งที่ใช้สำหรับแสดงข้อมูลเกี่ยวกับอุปกรณ์ที่เชื่อมต่อกับ PCI buses ในระบบและอุปกรณ์ฮาร์ดแวร์ที่เชื่อ
+  lspci เป็นคำสั่งที่ใช้สำหรับแสดงข้อมูลเกี่ยวกับอุปกรณ์ที่เชื่อมต่อกับ PCI buses ในระบบและอุปกรณ์ฮาร์ดแวร์ที่เชื่อม
   ต่อกับ PCI และ PCI bus
   คำสั่ง lspci จะแสดงข้อมูลเกี่ยวกับหมายเลขรุ่น/รายละเอียดของชิปสำหรับอุปกรณ์เช่น PCI bridge, VGA
   controller, Ethernet controller, USB controller, Audio device, IDE interface ฯลฯ
@@ -294,4 +294,4 @@ block devices เป็นอุปกรณ์จัดเก็บข้อม
 | [borntodev](https://www.borntodev.com/wp-content/uploads/2023/08/cheatsheet-linux-command.pdf) |
 | [hostpacific](https://www.hostpacific.com/command-linux/) |
 | [Saixiii]([https://www.hostpacific.com/command-linux/](https://saixiii.com/what-is-kernel/)https://saixiii.com/what-is-kernel/) |
-| [ioflood]([[https://www.hostpacific.com/command-linux/](https://saixiii.com/what-is-kernel/)https://saixiii.com/what-is-kernel/](https://ioflood.com/blog/lspci-linux-command/)https://ioflood.com/blog/lspci-linux-command/) |
+| [ioflood]([https://www.hostpacific.com/command-linux/](https://saixiii.com/what-is-kernel/)https://saixiii.com/what-is-kernel/](https://ioflood.com/blog/lspci-linux-command/)https://ioflood.com/blog/lspci-linux-command/) |
