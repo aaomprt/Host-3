@@ -54,12 +54,12 @@ $ timedatectl set-ntp true
 ### 3. cd
 เป็นคำสั่งที่ใช้ในการเข้าถึงหรือปลี่ยน Directory ปัจจุบันไปยัง Path นั้น คำสั่งนี้มีรูปแบบเป็น case sensitive ต้องพิมพ์ตัวอักษรเล็กใหญ่ให้ถูกต้องเท่านั้น ไม่เช่นนั้นจะมี error
    * การเข้าไปที่ Directory etc
-     ### ตัวอย่างการใช้คำสั่ง cd:
+     #### ตัวอย่างการใช้คำสั่ง cd:
      ```
      $ cd / etc
      ```
    * ย้อน Directory กลับขึ้นไปหนึ่งขั้น
-     ### ตัวอย่างการใช้คำสั่ง cd:
+     #### ตัวอย่างการใช้คำสั่ง cd:
      ```
      $ cd ..
      ```
@@ -67,14 +67,14 @@ $ timedatectl set-ntp true
 
 ### 4. cp
 ใช้เพื่อ copy file หรือ directory ที่เราสนใจ ไปยัง directory เป้าหมาย หรือ copy สร้างเป็น file ใหม่ตามที่เราต้องการ
-### Syntax:
+#### Syntax:
 ```
 cp [files name / directory] [Destination]
 ```
 
 ### 5. grep
 ใช้อ่านไฟล์ที่เราต้องการค้นหาทีละบรรทัด แล้วดูว่าตรง (match) กับคำหรือรูปแบบที่เราต้องการค้นหาหรือไม่ 
-### Syntax:
+#### Syntax:
 ```
 $ grep [OPTION] [FILE]
 ```
@@ -107,7 +107,7 @@ $ grep [OPTION] [FILE]
 
 ### 7. vi
 vi ใช้ในการสร้างหรือแก้ไข file ข้อมูล text
-### Syntax:
+#### Syntax:
 ```
 vi [options] [file]
 ```
@@ -137,7 +137,7 @@ vi [options] [file]
 
 ### 8. cat
 ใช้รวมข้อมูล file รวมถึงแสดงผลข้อมูลออกมาในรูปแบบ text
-### Syntax:
+#### Syntax:
 ```
 $ cat [OPTION] [FILE]
 ```
@@ -163,7 +163,7 @@ $ cat /etc/passwd
 
 ### 9. touch
 เป็นคำสั่งที่ใช้ในการเปลี่ยนแปลง file timestamps รวมถึงสามารถสร้าง file เปล่าได้
-### Syntax:
+#### Syntax:
 ```
 $ touch [OPTION]... FILE...ร้างโฟลเดอร์
 ```
@@ -171,7 +171,7 @@ $ touch [OPTION]... FILE...ร้างโฟลเดอร์
 
 ### 10. mkdir
 คำสั่งใช้สำหรับสร้าง Directory
-### Syntax:
+#### Syntax:
 ```
 $ mkdir <dirname> 
 ```
