@@ -7,7 +7,7 @@
 
 ## Command 📁
 
-### 1. hostname 📄
+### 1. hostname 📝
 ชื่อของเครื่อง Host ซึ่งสามารถกำหนดหรือแก้ไขได้ในไฟล์ `/etc/hostname` หรือผ่านคำสั่ง `hostname`
 #### Syntax:
 ```
