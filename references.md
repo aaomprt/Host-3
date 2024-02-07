@@ -1,7 +1,7 @@
 ## Host Configuration :sauropod:
 - [linkedin](https://www.linkedin.com/pulse/hosts-configuration-file-linux-razvan-alexandru-ionica)<br />
-- [linuxconfig](https://linuxconfig.org/hosts-file-example-on-linux)
-- [IBM]([https://linuxconfig.org/hosts-file-example-on-linux](https://www.ibm.com/docs/en/aix/7.2?topic=commands))
+- [linuxconfig](https://linuxconfig.org/hosts-file-example-on-linux)<br />
+- [IBM](https://www.ibm.com/docs/en/aix/7.2?topic=commands)
 
 ## I/O Devices :orangutan:
 - [2daygeek](https://www.2daygeek.com/check-system-hardware-devices-bus-information-lspci-lsscsi-lsusb-lsblk-linux/)<br />
