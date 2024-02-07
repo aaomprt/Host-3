@@ -18,19 +18,18 @@ hostname [ options ] [ new_hostname ]
 ```
 $ hostname -i
 ```
-#### โดยในส่วนของ option มีดังนี้:
+#### ตัวอย่าง option มีดังนี้:
 | Option        | Description   |
 | :-----------: | ------------- |
-| -a | Displays the alias name of the host |
-| -A | Displays every FQDN (Fully Qualified Domain Name) of the computer |
-| -b | Always set a hostname |
-| -d | Display DNS domain name |
-| -f | Display the FQDN |
-| -F | heck a file to recover and display the hostname |
-| -i | Display the computer’s IP address |
-| -I | Display all of the computer’s network addresses |
-| -s | Display the short version of the hostname |
-| -V | Expand all output to verbose |
+| -a | แสดง alias name ของ host |
+| -A | แสดงทุก (Fully Qualified Domain Name) ของ computer |
+| -b | ตั้งชื่อ hostname |
+| -d | แสดงชื่อ DNS domain |
+| -f | แสดง FQDN |
+| -F | ตรวจสอบไฟล์เพื่อ recover และแสดง hostname |
+| -i | แสดง IP address ของ computer |
+| -I | แสดง IP address ทั้งหมดของ computer |
+| -s | แสดง version ของ hostname แบบย่อ |
 
 
 ### 2. Date, Time, Time Zone
@@ -272,7 +271,3 @@ lscpu [ options ]
 ```
 $ lscpu -e
 ```
-
-| References |
-| :---: |
-|[Linkedin](https://www.linkedin.com/pulse/hosts-configuration-file-linux-razvan-alexandru-ionica) |
