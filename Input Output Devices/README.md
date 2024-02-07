@@ -214,7 +214,7 @@ lsusb มีอยู่ในเรสโพรสิทอรี สำหร�
 
 <br><hr><br>
 
-## What’s lsblk – List block devices
+## :computer: What’s lsblk – List block devices :pager:
 
 ![image](https://github.com/aaomprt/Host-3/assets/118121218/de579204-581e-4dd4-9b01-a909fcb4c8ff)
 
