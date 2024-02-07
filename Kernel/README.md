@@ -1,8 +1,9 @@
-## Kernel Module
+# Kernel :penguin:
+### Kernel Module
 **Kernel Module** ทำหน้าที่เหมือนเป็น driver ที่ควบคุมการทำงานส่วนต่างๆ ทั้งในส่วนของฮาร์ดแวร์ รวมถึง file system ที่อยู่ในระบบปฏิบัติการ 
 ข้อดีของ Kernel Module คือ สามารถติดตั้ง หรือนำ Kernel Module ออกไปจากระบบได้อย่างอิสระ โดยไม่จำเป็นต้องไปสร้าง Kernel ตัวใหม่
 
-### Module Location
+### Module Location :four_leaf_clover:
 - **/lib/modules/$(uname -r)/kernel** คือไดเรกทอรีหลักที่ใช้เก็บโมดูลของ kernel ทั้งหมดที่ถูกติดตั้งในระบบ หากต้องการแทรก ค้นหาไฟล์ หรือลบโมดูลออกจากเคอร์เนล สามารถเข้าไปค้นหาในไดเร็กทอรีโมดูลนี้ได้
     
   **Kernel Modules Subdirectories**
@@ -17,7 +18,7 @@
     | kernel | The main kernel code. specific in arch/*/kernel |
     | lib | Misc library routines |
 
-### The `lsmod` Command
+### The `lsmod` Command :herb:
   - lsmod เป็นคำสั่งที่ใช้แสดงรายการโมดูลใน Linux Kernel โดยจะแสดงผลลัพธ์ออกมาเป็นไฟล์ /proc/modules
   - Syntax:
     
@@ -35,7 +36,7 @@
     vsock                  36864  1 vmw_vsock_vmci_transport
     vmw_vmci               69632  1 vmw_vsock_vmci_transport 
     ```
-### The modinfo Command
+### The `modinfo` Command :blossom:
   - คำสั่ง **modinfo** ใช้ในการแสดงข้อมูลโมดูลใน Linux Kernel
   - Syntax:
     
@@ -72,7 +73,7 @@
     vermagic:       4.15.0-91-generic SMP mod_unload 
     parm:           force_async_tsc:force the asynchronous TSC mode (int)
     ```
-### The insmod Command
+### The `insmod` Command :sunflower:
   - insmod เป็นคำสั่งที่ใช้เพื่อโหลด(load) โมดูลเคิร์นเนล(kernel module) ลงใน kernel ของระบบ
   - Syntax:
     
@@ -88,7 +89,7 @@
     airo                   66291  0
     ```
 
-### The rmmod Command
+### The `rmmod` Command
   - คำสั่ง rmmod ใช้เพื่อลบโมดูลออกจากเคอร์เนล สามารถใช้ `modprobe` พร้อมกับ `-r` แทนการใช้ rmmod ได้
   - Syntax:
     
@@ -102,7 +103,7 @@
     pbmac@pbmac-server $ lsmod | grep axnet
     pbmac@pbmac-server $
     ```
-### The modprobe Command
+### The `modprobe` Command :tulip:
   - modprobe เป็นคำสั่งที่ใช้แสดงรายการ แทรก หรือลบโมดูลออกจากเคอร์เนล โดยจะค้นหาในไดเร็กทอรีโมดูล `/lib/modules/$ (uname -r)`
   - Syntax:
     
@@ -118,7 +119,7 @@
     | -v, --verbose | Prints messages about what the program is doing |
     | -r | `modprobe` to remove a module |
 
-### The depmod Command
+### The `depmod` Command :white_flower:
   - depmod เป็นคำสั่งที่ใช้ในการสร้างหรืออัปเดตไฟล์ใน Linux kernel
    - Syntax:
     
