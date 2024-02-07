@@ -1,4 +1,4 @@
-## Host Configuration
+## Host Configuration :sauropod:
 - [linkedin](https://www.linkedin.com/pulse/hosts-configuration-file-linux-razvan-alexandru-ionica)<br />
 - [linuxconfig](https://linuxconfig.org/hosts-file-example-on-linux)
 
