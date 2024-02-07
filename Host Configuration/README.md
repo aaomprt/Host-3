@@ -210,10 +210,10 @@ lshw [ -format ] [ -options ]
 #### format มีดังนี้:
 | Format | Description |
 | :----: | ----------- |
-| -html | Output hardware tree as HTML |
-| -xml | Output hardware tree as XML |
-| -short | Output hardware paths |
-| -businfo | Output bus information |
+| -html | แสดง hardware แบบ HTML tree |
+| -xml | แสดง hardware แบบ XML tree |
+| -short | แสดง hardware paths |
+| -businfo | แสดง bus information |
 #### ตัวอย่างการใช้คำสั่ง lshw with format:
 ```
 $ sudo lshw -short
