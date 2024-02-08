@@ -219,7 +219,7 @@ lsusb มีอยู่ในเรสโพรสิทอรี สำหร�
 <br>
 
 ### lsusb Usage :page_with_curl:
-| Option           | ความหมาย                                                                                                                                                                              |
+| Option           | Description                                                                                                                                                                              |
 |------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | -v, --verbose    | Tells lsusb to be verbose and display detailed information about the devices shown. This includes configuration descriptors for the device's current speed. Class descriptors will be shown, when available, for USB device classes including hub, audio, HID, communications, and chipcard |
 | -s [[bus]:][devnum] | Show only devices in specified bus and/or devnum. Both ID's are given in decimal and may be omitted. |
