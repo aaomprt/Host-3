@@ -10,6 +10,7 @@ I/O ของแต่ละอุปกรณ์ เช่น keyboard, mouse, 
 
 ## :busstop: What’s lspci – List PCI Bus Devices: :bus:
   ![image](https://github.com/aaomprt/Host-3/assets/118121218/08b8ae27-b1a1-41d8-b963-78b0090746a2)
+
   มาจาก *Peripheral Component Interconnect* <br>
   
   lspci เป็นคำสั่งที่ใช้สำหรับแสดงข้อมูลเกี่ยวกับอุปกรณ์ที่เชื่อมต่อกับ PCI buses ในระบบและอุปกรณ์ฮาร์ดแวร์ที่เชื่อม
