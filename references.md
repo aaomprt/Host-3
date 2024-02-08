@@ -9,7 +9,12 @@
 - [borntodev](https://www.borntodev.com/wp-content/uploads/2023/08/cheatsheet-linux-command.pdf)<br />
 - [hostpacific](https://www.hostpacific.com/command-linux/)<br />
 - [Saixiii](https://saixiii.com/what-is-kernel/)<br />
-- [ioflood](https://ioflood.com/blog/lspci-linux-command/)
+- [ioflood](https://ioflood.com/blog/lspci-linux-command/)<br />
+- [Linuxstar](https://linuxstar.info/lsscsi/)<br />
+- [Softpanorama](https://softpanorama.org/Utilities/lsscsi.shtml)<br />
+- [geeksforgeeks lsblk Command](https://www.geeksforgeeks.org/lsblk-command-in-linux-with-examples/)<br />
+- [geeksforgeeks lsusb command in Linux with Examples](https://www.geeksforgeeks.org/lsusb-command-in-linux-with-examples/)<br />
+- [libretexts](https://eng.libretexts.org/Bookshelves/Computer_Science/Operating_Systems/Linux_-_The_Penguin_Marches_On_(McClanahan)/09%3A_Managing_Linux_Devices/3.03%3A_Monitoring_Devices_in_Linux#:~:text=The%20lsusb%20command%20in%20Linux,device%20id%2C%20and%20vendor%20information.)
 
 ## Kernel :penguin:
 - [geeksforgeeks](https://www.geeksforgeeks.org/depmod-command-in-linux-with-examples/)<br />
