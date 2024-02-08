@@ -226,7 +226,7 @@ lsusb มีอยู่ในเรสโพรสิทอรี สำหร�
 | -d [vendor]:[product] | Show only devices with the specified vendor and product ID. Both ID's are given in hexadecimal |
 | -D device          | Do not scan the /dev/bus/usb directory, instead display only information about the device whose device file is given. The device file should be something like /dev/bus/usb/001/001 |
 | -t                | Tells lsusb to dump the physical USB device hierarchy as a tree. This overrides the v option. |
-| -V, --version     | พิมPrint version information on standard output, then exit successfully. |
+| -V, --version     | Print version information on standard output, then exit successfully. |
 
 <br>
 
@@ -234,25 +234,19 @@ lsusb มีอยู่ในเรสโพรสิทอรี สำหร�
 
   ```
   ~ $ lsusb
-  
-  Bus 001 Device 002: ID 8087:8000 Intel Corp. 
-  Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
-  Bus 003 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
-  Bus 002 Device 005: ID 0bda:b728 Realtek Semiconductor Corp. 
-  Bus 002 Device 004: ID 5986:0249 Acer, Inc 
-  Bus 002 Device 003: ID 0bda:0129 Realtek Semiconductor Corp. 
-  RTS5129 Card Reader Controller
-  Bus 002 Device 002: ID 045e:00cb Microsoft Corp. 
-  Basic Optical Mouse v2.0
-  Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 
-  2.0 root hub
-
   ```
+
+#### Output:
+![image](https://github.com/aaomprt/Host-3/assets/118121218/1ea80c90-cd75-40be-b25e-df72816c79fa)
+
 
 #### ตัวอย่าง: สามารถใช้ตัวเลือก -v เพื่อแสดงข้อมูลโดยละเอียดเกี่ยวกับอุปกรณ์ USB แต่ละรายการ
   ```
    ~ $ lsusb -v
   ```
+#### Output:
+![image](https://github.com/aaomprt/Host-3/assets/118121218/6b9e3a43-b135-4ef6-aeb0-e05197039b08)
+
 
 <br><hr><br>
 
