@@ -219,6 +219,17 @@ lsusb มีอยู่ในเรสโพรสิทอรี สำหร�
 <br>
 
 ### lsusb Usage :page_with_curl:
+| Option           | ความหมาย                                                                                                                                                                              |
+|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| -v, --verbose    | Tells lsusb to be verbose and display detailed information about the devices shown. This includes configuration descriptors for the device's current speed. Class descriptors will be shown, when available, for USB device classes including hub, audio, HID, communications, and chipcard |
+| -s [[bus]:][devnum] | Show only devices in specified bus and/or devnum. Both ID's are given in decimal and may be omitted. |
+| -d [vendor]:[product] | Show only devices with the specified vendor and product ID. Both ID's are given in hexadecimal |
+| -D device          | Do not scan the /dev/bus/usb directory, instead display only information about the device whose device file is given. The device file should be something like /dev/bus/usb/001/001 |
+| -t                | Tells lsusb to dump the physical USB device hierarchy as a tree. This overrides the v option. |
+| -V, --version     | พิมPrint version information on standard output, then exit successfully. |
+
+<br>
+
 #### ตัวอย่าง: สามารถใช้คำสั่ง lsusb ในการรายงานข้อมูลเกี่ยวกับตัวควบคุม USB และอุปกรณ์ทั้งหมดที่เชื่อมต่อ
 
   ```
@@ -263,6 +274,20 @@ Syntax:
 <br>
 
 ### lsblk Usage :page_with_curl:
+
+| Option        | Description                                                  |
+|---------------|--------------------------------------------------------------|
+| -a, --all     | Display all devices, including empty ones.                   |
+| -b, --bytes   | Print sizes in bytes instead of the more human-readable formats. |
+| -i, --inverse | Invert the output, showing only non-empty devices.           |
+| -l, --list    | Print output in a list format.                               |
+| -o, --output  | Define the output columns to display.                        |
+| -p, --pairs   | Display key-value pairs for each device.                     |
+| -t, --tree    | Print devices in a tree-like format.                         |
+| -x, --exclude | Exclude devices that match the specified criteria.           |
+
+<br>
+
 #### ตัวอย่าง: block devices เป็นอุปกรณ์จัดเก็บข้อมูล เช่น ฮาร์ดดิสก์ แฟลชไดรฟ์ เป็นต้นใช้คำสั่ง lsblk เพื่อดูข้อมูลเกี่ยวกับ block devices ดังนี้
 
   ```
