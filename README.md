@@ -46,7 +46,7 @@ Host หมายถึง คอมพิวเตอร์หรือเซ�
 | 65070113  | นายนพกร บุญมี  | Memory | pic |
 | 65070131  | นางสาวปราณปรีญา เม่งมั่งมี  | Kernel | ![img](https://scontent.fbkk3-4.fna.fbcdn.net/v/t39.30808-1/357108356_6260830513993404_6867662345275536233_n.jpg?stp=dst-jpg_p320x320&_nc_cat=108&ccb=1-7&_nc_sid=5740b7&_nc_eui2=AeE80EGz3AZxG-4hQSqa8CPv13EjVCntvmjXcSNUKe2-aJtoXaAb9LTWeWh3jWBvlbhOJYQAyFBcKMZfPDlEP3m8&_nc_ohc=YabJ-qpm2wYAX8SQZGG&_nc_ht=scontent.fbkk3-4.fna&oh=00_AfDiuW7gOZ0MjkbfcwWLZ3aoRssuPImaqVbGtDO4L_1otw&oe=65CA83B7) |
 | 65070132  | นางสาวปลายฟ้า พุ่มเจริญ  | Host Configuration | pic |
-| 65070137  | นางสาวปานฤทัย ผิวสุข  | Host Configuration | <img src="https://github.com/aaomprt/Host-3/assets/93991575/9de41cd5-5f0f-4053-98da-6dc8a9d03526" width="50%"> |
+| 65070137  | นางสาวปานฤทัย ผิวสุข  | Host Configuration | <img src="https://github.com/aaomprt/Host-3/assets/93991575/9de41cd5-5f0f-4053-98da-6dc8a9d03526" width="60%"> |
 | 65070145  | นางสาวพรรณราย สุคง  | Input and Output Devices | pic |
 
 ## [Reference](https://github.com/aaomprt/Host-3/blob/main/references.md) :unlock:
