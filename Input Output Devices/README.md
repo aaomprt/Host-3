@@ -155,6 +155,27 @@ I/O ของแต่ละอุปกรณ์ เช่น keyboard, mouse, 
 
 ### lsscsi Usage :page_with_curl:
 ใช้คำสั่งด้านล่างเพื่อดูข้อมูลอุปกรณ์ SCSI คำสั่งนี้จะแสดงรายละเอียดของอุปกรณ์ SCSI ที่เชื่อมต่อกับระบบ
+
+| Option        | Description                                                                                                    | Example                   |
+| ------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------- |
+| -c, --classic | The output is similar to that obtained from 'cat /proc/scsi/scsi'                                              | `lsscsi -c`               |
+| -d, --device  | After outputting the (probable) scsi device name the device node major and minor numbers are shown in brackets | `lsscsi -d`               |
+| -g, --generic | Output the scsi generic device file name                                                                       | `lsscsi -g`               |
+| -h, --help    | Output the usage message and exit                                                                              | `lsscsi -h`               |
+| -H, --hosts   | List the SCSI hosts currently attached to the system.                                                           | `lsscsi -H`               |
+| -k, --kname   | Use linux default algorithm for naming devices rather than the "match by major and minor" in the "/dev" directory | `lsscsi -k`               |
+| -L, --list    | Output additional information in <attribute_name>=<value> pairs                                                 | `lsscsi -L`               |
+| -l, --long    | Output additional information for each SCSI device (host)                                                       | `lsscsi -l`               |
+| -p, --protection | Output additional data integrity (protection) information                                                      | `lsscsi -p`               |
+| -t, --transport | Output transport information                                                                                  | `lsscsi -t`               |
+| -v, --verbose | Outputs directory names where information is found                                                             | `lsscsi -v`               |
+| -V, --version | Outputs version information then exits                                                                         | `lsscsi -V`               |
+| -y, --sysfsroot=PATH | Assumes sysfs is mounted at PATH instead of the default '/sys'                                                  | `lsscsi -y /path/to/sysfs` |
+
+
+<br>
+
+
 #### ตัวอย่าง: หากต้องการดูอุปกรณ์ scsi/sata ทั้งหมด ให้ใช้คำสั่ง lsscsi ดังนี้
   ```
  ~ $ lsscsi
